@@ -1,0 +1,185 @@
+/* 
+ * Fluxos Smart - Responsive Styles
+ * Author: Fluxos Smart Team
+ * Version: 1.0
+ */
+
+/* Large Screens (1200px and down) */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .clients-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Medium Screens (992px and down) */
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    html {
+        font-size: 15px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .hero-text, .hero-image {
+        flex: none;
+        width: 100%;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .steps-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-xl);
+    }
+    
+    .steps-container::before {
+        display: none;
+    }
+    
+    .step-card {
+        max-width: 45%;
+    }
+    
+    .calculator-container {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small Screens (768px and down) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .header-content {
+        position: relative;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: var(--shadow-md);
+        padding: 1rem 0;
+        display: none;
+        z-index: 1000;
+    }
+    
+    .main-nav.active {
+        display: block;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-link {
+        padding: 0.75rem 1rem;
+    }
+    
+    .header-cta {
+        display: none;
+    }
+    
+    .hero-section {
+        padding: 7rem 0 3rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .step-card {
+        max-width: 100%;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+}
+
+/* Extra Small Screens (576px and down) */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    html {
+        font-size: 14px;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-legal {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}

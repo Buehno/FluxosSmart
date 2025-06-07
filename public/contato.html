@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Fluxos Smart</title>
+    <meta name="description" content="Entre em contato com a Fluxos Smart para automatizar processos da sua empresa com IA acessível. Agende uma demonstração ou inicie seu trial gratuito.">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/responsive.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../src/img/logo.png" alt="Fluxos Smart Logo">
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html#solucoes" class="nav-link">Soluções</a></li>
+                        <li><a href="index.html#como-funciona" class="nav-link">Como Funciona</a></li>
+                        <li><a href="index.html#beneficios" class="nav-link">Benefícios</a></li>
+                        <li><a href="index.html#depoimentos" class="nav-link">Depoimentos</a></li>
+                        <li><a href="contato.html" class="nav-link active">Contato</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-cta">
+                    <a href="contato.html" class="btn btn-primary">Agendar Demo</a>
+                </div>
+                
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Entre em Contato</h1>
+            <p>Estamos prontos para ajudar sua empresa a automatizar processos e reduzir custos</p>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="contact-options">
+        <div class="container">
+            <div class="options-grid">
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Agendar Demonstração</h3>
+                    <p>Veja nossos agentes de IA em ação com um especialista guiando você.</p>
+                    <a href="#demo-form" class="btn btn-primary">Agendar Agora</a>
+                </div>
+                
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Iniciar Trial Gratuito</h3>
+                    <p>Experimente por 14 dias sem compromisso e veja os resultados.</p>
+                    <a href="#trial-form" class="btn btn-primary">Começar Trial</a>
+                </div>
+                
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Falar com Consultor</h3>
+                    <p>Tire suas dúvidas e receba uma consultoria personalizada.</p>
+                    <a href="#contact-form" class="btn btn-primary">Enviar Mensagem</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Forms -->
+    <section class="contact-forms">
+        <div class="container">
+            <div class="forms-tabs">
+                <button class="tab-btn active" data-tab="demo">Agendar Demonstração</button>
+                <button class="tab-btn" data-tab="trial">Iniciar Trial</button>
+                <button class="tab-btn" data-tab="contact">Contato Geral</button>
+            </div>
+            
+            <div class="tab-content">
+                <!-- Demo Form -->
+                <div id="demo-form" class="form-container active">
+                    <h2>Agende uma Demonstração</h2>
+                    <p>Preencha o formulário abaixo para agendar uma demonstração personalizada com um de nossos especialistas.</p>
+                    
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="demo-name">Nome Completo*</label>
+                                <input type="text" id="demo-name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="demo-email">E-mail Corporativo*</label>
+                                <input type="email" id="demo-email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="demo-phone">Telefone*</label>
+                                <input type="tel" id="demo-phone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="demo-company">Empresa*</label>
+                                <input type="text" id="demo-company" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="demo-size">Tamanho da Empresa*</label>
+                                <select id="demo-size" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="1-10">1-10 funcionários</option>
+                                    <option value="11-50">11-50 funcionários</option>
+                                    <option value="51-200">51-200 funcionários</option>
+                                    <option value="201+">201+ funcionários</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="demo-interest">Principal Interesse*</label>
+                                <select id="demo-interest" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="atendimento">Assistente de Atendimento</option>
+                                    <option value="documentos">Processador de Documentos</option>
+                                    <option value="agendamento">Agente de Agendamento</option>
+                                    <option value="relatorios">Automatizador de Relatórios</option>
+                                    <option value="recrutamento">Assistente                                    <option value="recrutamento">Assistente de Recrutamento</option>
+                                    <option value="todos">Todos os agentes</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="demo-message">Comentários Adicionais</label>
+                            <textarea id="demo-message" rows="4"></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="demo-terms" required>
+                            <label for="demo-terms">Concordo com a <a href="#">Política de Privacidade</a> e com o uso dos meus dados para contato comercial.</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Agendar Demonstração</button>
+                    </form>
+                </div>
+                
+                <!-- Trial Form -->
+                <div id="trial-form" class="form-container">
+                    <h2>Inicie seu Trial Gratuito</h2>
+                    <p>Experimente a Fluxos Smart por 14 dias sem compromisso. Não é necessário cartão de crédito.</p>
+                    
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="trial-name">Nome Completo*</label>
+                                <input type="text" id="trial-name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="trial-email">E-mail Corporativo*</label>
+                                <input type="email" id="trial-email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="trial-phone">Telefone*</label>
+                                <input type="tel" id="trial-phone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="trial-company">Empresa*</label>
+                                <input type="text" id="trial-company" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="trial-size">Tamanho da Empresa*</label>
+                                <select id="trial-size" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="1-10">1-10 funcionários</option>
+                                    <option value="11-50">11-50 funcionários</option>
+                                    <option value="51-200">51-200 funcionários</option>
+                                    <option value="201+">201+ funcionários</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="trial-agent">Agente para Trial*</label>
+                                <select id="trial-agent" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="atendimento">Assistente de Atendimento</option>
+                                    <option value="documentos">Processador de Documentos</option>
+                                    <option value="agendamento">Agente de Agendamento</option>
+                                    <option value="relatorios">Automatizador de Relatórios</option>
+                                    <option value="recrutamento">Assistente de Recrutamento</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="trial-terms" required>
+                            <label for="trial-terms">Concordo com a <a href="#">Política de Privacidade</a> e com o uso dos meus dados para contato comercial.</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Iniciar Trial Gratuito</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Form -->
+                <div id="contact-form" class="form-container">
+                    <h2>Entre em Contato</h2>
+                    <p>Tem dúvidas ou precisa de mais informações? Envie-nos uma mensagem.</p>
+                    
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Nome Completo*</label>
+                                <input type="text" id="contact-name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-email">E-mail*</label>
+                                <input type="email" id="contact-email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-phone">Telefone</label>
+                                <input type="tel" id="contact-phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-subject">Assunto*</label>
+                                <select id="contact-subject" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="info">Informações Gerais</option>
+                                    <option value="sales">Vendas</option>
+                                    <option value="support">Suporte</option>
+                                    <option value="partnership">Parcerias</option>
+                                    <option value="other">Outro</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-message">Mensagem*</label>
+                            <textarea id="contact-message" rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="contact-terms" required>
+                            <label for="contact-terms">Concordo com a <a href="#">Política de Privacidade</a> e com o uso dos meus dados para contato comercial.</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>E-mail</h3>
+                    <p><a href="mailto:contato@fluxossmart.com.br">contato@fluxossmart.com.br</a></p>
+                    <p><a href="mailto:suporte@fluxossmart.com.br">suporte@fluxossmart.com.br</a></p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Telefone</h3>
+                    <p><a href="tel:+551134567890">(11) 3456-7890</a></p>
+                    <p><a href="tel:+5511987654321">(11) 98765-4321</a></p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Endereço</h3>
+                    <p>Av. Paulista, 1000, 10º andar</p>
+                    <p>Bela Vista, São Paulo - SP</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0976951333286!2d-46.65390548502264!3d-23.564611284681766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c7f481fd9f%3A0x9982bfde4df54830!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1623252345678!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quanto tempo leva para implementar um agente?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A implementação de um agente da Fluxos Smart leva entre 2 e 4 semanas, dependendo da complexidade do processo e das integrações necessárias. Nosso time de implementação trabalha para minimizar qualquer interrupção nos seus processos atuais.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>É necessário ter equipe técnica para implementar?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não é necessário ter uma equipe técnica dedicada. Nossos agentes são projetados para serem implementados com mínima necessidade de recursos técnicos do cliente. Nossa equipe conduz todo o processo de configuração e integração.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como funciona o trial gratuito?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O trial gratuito tem duração de 14 dias e inclui acesso completo a um agente de sua escolha. Não é necessário cartão de crédito para iniciar. Durante o período, você terá suporte da nossa equipe para configuração e testes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quais sistemas a Fluxos Smart se integra?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nossos agentes se integram com os principais sistemas utilizados por PMEs, incluindo ERPs, CRMs, sistemas contábeis, plataformas de e-commerce e ferramentas de produtividade. Temos conectores prontos para sistemas populares e também podemos desenvolver integrações personalizadas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Existe período mínimo de contrato?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oferecemos planos mensais sem período mínimo de contrato, mas também temos opções trimestrais e anuais com descontos progressivos. Você pode cancelar a qualquer momento sem multas ou taxas adicionais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="../src/img/logo-white.png" alt="Fluxos Smart">
+                    </div>
+                    <p class="footer-tagline">Automatização inteligente para pequenas e médias empresas</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Soluções</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Assistente de Atendimento</a></li>
+                        <li><a href="#">Processador de Documentos</a></li>
+                        <li><a href="#">Agente de Agendamento</a></li>
+                        <li><a href="#">Automatizador de Relatórios</a></li>
+                        <li><a href="#">Assistente de Recrutamento</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Empresa</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Como Funciona</a></li>
+                        <li><a href="#">Casos de Sucesso</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Contato</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> contato@fluxossmart.com.br</li>
+                        <li><i class="fas fa-phone"></i> (11) 3456-7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000, São Paulo - SP</li>
+                    </ul>
+                    <div class="newsletter">
+                        <h4>Receba novidades</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Seu e-mail" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2025 Fluxos Smart. Todos os direitos reservados.
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">LGPD</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/form-handler.js"></script>
+</body>
+</html>
