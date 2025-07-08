@@ -3,15 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fluxos Smart | Automação Inteligente para PMEs</title>
-    <meta name="description" content="Automatize processos repetitivos com IA acessível para pequenas e médias empresas. Reduza custos operacionais em até 30% com a Fluxos Smart.">
+    
+    <!-- SEO Avançado -->
+    <title>Fluxos Smart | Automação Inteligente para PMEs - Economize até 30%</title>
+    <meta name="description" content="Automatize processos repetitivos com IA acessível para pequenas e médias empresas. Reduza custos operacionais em até 30% com a Fluxos Smart. Trial gratuito de 14 dias.">
+    <meta name="keywords" content="automação, IA, inteligência artificial, PME, processos, economia, chatbot, RPA">
+    <meta name="author" content="Fluxos Smart">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.fluxossmart.com.br/">
+    <meta property="og:title" content="Fluxos Smart | Automação Inteligente para PMEs">
+    <meta property="og:description" content="Automatize processos repetitivos com IA acessível. Reduza custos em até 30%. Trial gratuito!">
+    <meta property="og:image" content="https://www.fluxossmart.com.br/src/img/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.fluxossmart.com.br/">
+    <meta property="twitter:title" content="Fluxos Smart | Automação Inteligente para PMEs">
+    <meta property="twitter:description" content="Automatize processos repetitivos com IA acessível. Reduza custos em até 30%. Trial gratuito!">
+    <meta property="twitter:image" content="https://www.fluxossmart.com.br/src/img/og-image.jpg">
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="src/img/apple-touch-icon.png">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="../src/css/style.css">
-    <link rel="stylesheet" href="../src/css/responsive.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,6 +39,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Preload recursos críticos -->
+    <link rel="preload" href="src/css/style.css" as="style">
+    <link rel="preload" href="src/js/main.js" as="script">
 </head>
 <body>
     <!-- Header -->
@@ -28,7 +51,7 @@
             <div class="header-content">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="/src/img/logo.png" alt="Fluxos Smart Logo" class="img">
+                        <img src="src/img/logo.png" alt="Fluxos Smart Logo" class="img">
                     </a>
                 </div>
                 
@@ -67,7 +90,9 @@
                         <a href="contato.html" class="btn btn-outline">Agende uma Demonstração</a>
                     </div>
                 </div>
-                <
+                <div class="hero-image">
+                    <img src="src/img/hero-automation.png" alt="Automação Inteligente" class="lazy" data-src="src/img/hero-automation.png">
+                </div>
             </div>
         </div>
     </section>
@@ -102,7 +127,7 @@
                     </div>
                     <h3>Tecnologia Avançada, Preço Acessível</h3>
                     <p>Acesse o mesmo nível de automação das grandes empresas, com investimento compatível com PMEs.</p>
-                    <div class="benefit-highlight">A partir de R$ 299/mês</div>
+                    <div class="benefit-highlight">A partir de R\$ 299/mês</div>
                 </div>
             </div>
         </div>
@@ -207,7 +232,7 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-image">
-                            <img src="../src/img/client1.jpg" alt="Carlos Mendes">
+                            <img src="src/img/client1.jpg" alt="Carlos Mendes" class="lazy" data-src="src/img/client1.jpg">
                         </div>
                         <div class="author-info">
                             <h4>Carlos Mendes</h4>
@@ -222,7 +247,7 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-image">
-                            <img src="../src/img/client2.jpg" alt="Ana Oliveira">
+                            <img src="src/img/client2.jpg" alt="Ana Oliveira" class="lazy" data-src="src/img/client2.jpg">
                         </div>
                         <div class="author-info">
                             <h4>Ana Oliveira</h4>
@@ -237,7 +262,7 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-image">
-                            <img src="../src/img/client3.jpg" alt="Dr. Paulo Souza">
+                            <img src="src/img/client3.jpg" alt="Dr. Paulo Souza" class="lazy" data-src="src/img/client3.jpg">
                         </div>
                         <div class="author-info">
                             <h4>Dr. Paulo Souza</h4>
@@ -248,7 +273,7 @@
             </div>
             
             <div class="testimonial-controls">
-                <button class="testimonial-control" data-index="0"></button>
+                <button class="testimonial-control active" data-index="0"></button>
                 <button class="testimonial-control" data-index="1"></button>
                 <button class="testimonial-control" data-index="2"></button>
             </div>
@@ -287,7 +312,11 @@
                 
                 <div class="calculator-result">
                     <h3>Sua economia estimada:</h3>
-                    <div class="result-value" id="savings-result">R$ 12.500,00/mês</div>
+                    <div class="result-value" id="savings-result">R\$ 12.500,00/mês</div>
+                    <div class="result-annual">
+                        <span>Economia anual: </span>
+                        <span id="annual-roi">R\$ 150.000,00/ano</span>
+                    </div>
                     <p class="result-note">Baseado nos valores informados e na média de custo operacional de PMEs brasileiras.</p>
                     <a href="contato.html" class="btn btn-primary">Cálculo detalhado com especialista</a>
                 </div>
@@ -301,12 +330,12 @@
             <h2 class="section-title">Empresas que confiam na Fluxos Smart</h2>
             
             <div class="clients-grid">
-                <div class="client-logo"><img src="../src/img/client-logo1.png" alt="Cliente 1"></div>
-                <div class="client-logo"><img src="../src/img/client-logo2.png" alt="Cliente 2"></div>
-                <div class="client-logo"><img src="../src/img/client-logo3.png" alt="Cliente 3"></div>
-                <div class="client-logo"><img src="../src/img/client-logo4.png" alt="Cliente 4"></div>
-                <div class="client-logo"><img src="../src/img/client-logo5.png" alt="Cliente 5"></div>
-                <div class="client-logo"><img src="../src/img/client-logo6.png" alt="Cliente 6"></div>
+                <div class="client-logo"><img src="src/img/client-logo1.png" alt="Cliente 1" class="lazy" data-src="src/img/client-logo1.png"></div>
+                <div class="client-logo"><img src="src/img/client-logo2.png" alt="Cliente 2" class="lazy" data-src="src/img/client-logo2.png"></div>
+                <div class="client-logo"><img src="src/img/client-logo3.png" alt="Cliente 3" class="lazy" data-src="src/img/client-logo3.png"></div>
+                <div class="client-logo"><img src="src/img/client-logo4.png" alt="Cliente 4" class="lazy" data-src="src/img/client-logo4.png"></div>
+                <div class="client-logo"><img src="src/img/client-logo5.png" alt="Cliente 5" class="lazy" data-src="src/img/client-logo5.png"></div>
+                <div class="client-logo"><img src="src/img/client-logo6.png" alt="Cliente 6" class="lazy" data-src="src/img/client-logo6.png"></div>
             </div>
         </div>
     </section>
@@ -332,7 +361,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <div class="footer-logo">
-                        <img src="../src/img/logo-white.png" alt="Fluxos Smart">
+                        <img src="src/img/logo-white.png" alt="Fluxos Smart" class="lazy" data-src="src/img/logo-white.png">
                     </div>
                     <p class="footer-tagline">Automatização inteligente para pequenas e médias empresas</p>
                     <div class="social-links">
@@ -366,7 +395,6 @@
                 </div>
                 
                 <div class="footer-column">
-                 
                     <div class="newsletter">
                         <h4>Receba novidades</h4>
                         <form class="newsletter-form">
@@ -401,7 +429,40 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="../src/js/main.js"></script>
-    <script src="../src/js/animations.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/animations.js"></script>
+    <script src="src/js/form-handler.js"></script>
+    <script src="src/js/whatsapp-widget.js"></script>
+    <script src="src/js/analytics.js"></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID'); // Substitua pelo seu ID real
+    </script>
+
+    <!-- Schema Markup para SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Fluxos Smart",
+      "description": "Automatização inteligente para pequenas e médias empresas",
+      "url": "https://www.fluxossmart.com.br",
+      "logo": "https://www.fluxossmart.com.br/src/img/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-11-99999-9999",
+        "contactType": "customer service"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/fluxossmart",
+        "https://www.instagram.com/fluxossmart"
+      ]
+    }
+    </script>
 </body>
 </html>

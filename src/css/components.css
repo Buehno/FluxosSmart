@@ -1,0 +1,75 @@
+/* Componentes Extras - Fluxos Smart */
+
+/* Success Message */
+.success-message {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 2px solid #28a745;
+}
+
+.success-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.success-message h3 {
+    color: #28a745;
+    margin-bottom: 0.5rem;
+}
+
+/* Lazy Loading */
+img.lazy {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* Calculator Improvements */
+.result-annual {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Form Enhancements */
+.form-error {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.form-success {
+    color: #28a745;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Loading States */
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+    .whatsapp-widget {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .success-message {
+        padding: 1.5rem;
+    }
+    
+    .result-annual {
+        font-size: 1rem;
+    }
+}
