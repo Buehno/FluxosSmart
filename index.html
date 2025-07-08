@@ -429,11 +429,12 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="src/js/main.js"></script>
-    <script src="src/js/animations.js"></script>
-    <script src="src/js/form-handler.js"></script>
-    <script src="src/js/whatsapp-widget.js"></script>
-    <script src="src/js/analytics.js"></script>
+   <!-- JavaScript principal deve vir por último para garantir que o DOM já foi carregado -->
+<script src="src/js/main.js"></script>
+<script src="src/js/animations.js"></script>
+<script src="src/js/whatsapp-widget.js"></script>
+<script src="src/js/analytics.js"></script>
+<!-- Remova o form-handler.js se a validação já está no main.js -->
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
