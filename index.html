@@ -4,466 +4,1128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Avançado -->
-    <title>Fluxos Smart | Automação Inteligente para PMEs - Economize até 30%</title>
-    <meta name="description" content="Automatize processos repetitivos com IA acessível para pequenas e médias empresas. Reduza custos operacionais em até 30% com a Fluxos Smart. Trial gratuito de 14 dias.">
-    <meta name="keywords" content="automação, IA, inteligência artificial, PME, processos, economia, chatbot, RPA">
-    <meta name="author" content="Fluxos Smart">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.fluxossmart.com.br/">
-    <meta property="og:title" content="Fluxos Smart | Automação Inteligente para PMEs">
-    <meta property="og:description" content="Automatize processos repetitivos com IA acessível. Reduza custos em até 30%. Trial gratuito!">
-    <meta property="og:image" content="https://www.fluxossmart.com.br/src/img/og-image.jpg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.fluxossmart.com.br/">
-    <meta property="twitter:title" content="Fluxos Smart | Automação Inteligente para PMEs">
-    <meta property="twitter:description" content="Automatize processos repetitivos com IA acessível. Reduza custos em até 30%. Trial gratuito!">
-    <meta property="twitter:image" content="https://www.fluxossmart.com.br/src/img/og-image.jpg">
+    <!-- SEO -->
+    <title>IAgentics | Automação com IA para PMEs - Economize até 40%</title>
+    <meta name="description" content="Solução completa de automação inteligente para pequenas e médias empresas. Reduza custos em até 40% com nossos agentes de IA especializados.">
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="src/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="src/css/responsive.css">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#4361EE',
+                            dark: '#3A56D4'
+                        },
+                        secondary: '#3F37C9',
+                        accent: '#4CC9F0',
+                        dark: '#1A1A2E',
+                        light: '#F8F9FA'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-2': 'float 5s ease-in-out infinite 1s',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Preload recursos críticos -->
-    <link rel="preload" href="src/css/style.css" as="style">
-    <link rel="preload" href="src/js/main.js" as="script">
+    <style type="text/css">
+        .gradient-text {
+            background: linear-gradient(90deg, #4361EE 0%, #4CC9F0 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .mobile-menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #1A1A2E;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        
+        .testimonial-card {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid #4361EE;
+        }
+        
+        .modal {
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+    </style>
 </head>
-<body>
+<body class="font-sans text-dark bg-light">
+    <!-- Barra de Aviso -->
+    <div class="bg-primary text-white py-2 px-4 text-sm text-center">
+        <p>🚀 <strong>Oferta Especial:</strong> 15 dias grátis + 20% de desconto no primeiro trimestre <a href="#cta" class="font-bold underline ml-1">Saiba mais</a></p>
+    </div>
+
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
+    <header class="sticky top-0 z-50 bg-white shadow-md transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="src/img/logo.png" alt="Fluxos Smart Logo" class="img">
+                    <a href="index.html" class="flex items-center">
+                        <span class="text-2xl font-bold gradient-text">IAgentics</span>
                     </a>
                 </div>
                 
-                <nav class="main-nav">
-                    <ul class="nav-list">
-                        <li><a href="#solucoes" class="nav-link">Soluções</a></li>
-                        <li><a href="#como-funciona" class="nav-link">Como Funciona</a></li>
-                        <li><a href="#beneficios" class="nav-link">Benefícios</a></li>
-                        <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
-                        <li><a href="contato.html" class="nav-link">Contato</a></li>
-                    </ul>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#solutions" class="font-medium hover:text-primary transition">Soluções</a>
+                    <a href="#industries" class="font-medium hover:text-primary transition">Setores</a>
+                    <a href="#cases" class="font-medium hover:text-primary transition">Casos</a>
+                    <a href="#pricing" class="font-medium hover:text-primary transition">Preços</a>
+                    <a href="#about" class="font-medium hover:text-primary transition">Sobre</a>
                 </nav>
                 
-                <div class="header-cta">
-                    <a href="contato.html" class="btn btn-primary">Agendar Demo</a>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="login.html" class="font-medium hover:text-primary transition">Entrar</a>
+                    <a href="#cta" class="bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-dark transition">Comece Agora</a>
                 </div>
                 
-                <div class="mobile-menu-toggle">
+                <button class="mobile-menu-toggle md:hidden focus:outline-none">
                     <span></span>
                     <span></span>
                     <span></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#solutions" class="block py-2 font-medium">Soluções</a>
+                <a href="#industries" class="block py-2 font-medium">Setores</a>
+                <a href="#cases" class="block py-2 font-medium">Casos</a>
+                <a href="#pricing" class="block py-2 font-medium">Preços</a>
+                <a href="#about" class="block py-2 font-medium">Sobre</a>
+                <div class="pt-4 border-t border-gray-100">
+                    <a href="login.html" class="block py-2 font-medium">Entrar</a>
+                    <a href="#cta" class="block mt-2 bg-primary text-white px-6 py-2 rounded-lg font-medium text-center">Comece Agora</a>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Automatize processos repetitivos com IA acessível</h1>
-                    <p class="hero-subtitle">Reduza custos operacionais em até 30% e libere sua equipe para o que realmente importa: fazer seu negócio crescer.</p>
-                    <div class="hero-cta">
-                        <a href="contato.html" class="btn btn-primary">Comece seu Trial Gratuito</a>
-                        <a href="contato.html" class="btn btn-outline">Agende uma Demonstração</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="src/img/hero-automation.png" alt="Automação Inteligente" class="lazy" data-src="src/img/hero-automation.png">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefícios Section -->
-    <section id="beneficios" class="benefits-section">
-        <div class="container">
-            <h2 class="section-title">Por que escolher a Fluxos Smart</h2>
-            
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Economia Real e Comprovada</h3>
-                    <p>Reduza custos operacionais em até 30% automatizando tarefas repetitivas.</p>
-                    <div class="benefit-highlight">ROI médio em 2,7 meses</div>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Implementação Sem Complicações</h3>
-                    <p>Tenha sua solução funcionando em 2-4 semanas, sem interrupções nos seus processos atuais.</p>
-                    <div class="benefit-highlight">Setup em até 10 dias</div>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-unlock"></i>
-                    </div>
-                    <h3>Tecnologia Avançada, Preço Acessível</h3>
-                    <p>Acesse o mesmo nível de automação das grandes empresas, com investimento compatível com PMEs.</p>
-                    <div class="benefit-highlight">A partir de R\$ 299/mês</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Soluções Section -->
-    <section id="solucoes" class="solutions-section">
-        <div class="container">
-            <h2 class="section-title">Agentes de IA prontos para sua empresa</h2>
-            <p class="section-subtitle">Nossos agentes são especializados nos processos mais comuns e desafiadores para pequenas e médias empresas.</p>
-            
-            <div class="solutions-grid">
-                <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Assistente de Atendimento ao Cliente</h3>
-                    <p>Atendimento automatizado 24/7, respostas instantâneas e encaminhamento inteligente de tickets.</p>
-                    <div class="solution-highlight">Redução de 70% no tempo de resposta</div>
-                    <a href="contato.html" class="btn btn-outline btn-sm">Saiba mais</a>
-                </div>
-                
-                <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fas fa-file-invoice"></i>
-                    </div>
-                    <h3>Processador de Documentos</h3>
-                    <p>Extração automática de dados de notas fiscais e documentos, com organização e validação inteligente.</p>
-                    <div class="solution-highlight">85% menos tempo em processamento manual</div>
-                    <a href="contato.html" class="btn btn-outline btn-sm">Saiba mais</a>
-                </div>
-                
-                <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fas fa-calendar-check"></i>
-                    </div>
-                    <h3>Agente de Agendamento</h3>
-                    <p>Gerenciamento automático de agendas, confirmações e lembretes personalizados.</p>
-                    <div class="solution-highlight">Redução de 60% em no-shows</div>
-                    <a href="contato.html" class="btn btn-outline btn-sm">Saiba mais</a>
-                </div>
-                
-                <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <h3>Automatizador de Relatórios</h3>
-                    <p>Coleta automática de dados, geração de relatórios periódicos e alertas de KPIs.</p>
-                    <div class="solution-highlight">90% menos tempo na preparação de relatórios</div>
-                    <a href="contato.html" class="btn btn-outline btn-sm">Saiba mais</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Como Funciona Section -->
-    <section id="como-funciona" class="how-it-works-section">
-        <div class="container">
-            <h2 class="section-title">Automatize processos em 4 passos simples</h2>
-            
-            <div class="steps-container">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3>Escolha seu agente</h3>
-                    <p>Selecione o processo que deseja automatizar com base nas suas necessidades.</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3>Configuração rápida</h3>
-                    <p>Nossa equipe ajuda na implementação e configuração do seu agente.</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3>Integração simples</h3>
-                    <p>Conecte o agente com seus sistemas atuais sem complicações.</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <h3>Resultados imediatos</h3>
-                    <p>Acompanhe a economia e o aumento de produtividade desde o primeiro dia.</p>
-                </div>
-            </div>
-            
-            <div class="section-cta">
-                <a href="#" class="btn btn-secondary" id="open-video">Veja como é simples</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Depoimentos Section -->
-    <section id="depoimentos" class="testimonials-section">
-        <div class="container">
-            <h2 class="section-title">O que nossos clientes estão dizendo</h2>
-            
-            <div class="testimonials-slider">
-                <div class="testimonial-card active">
-                    <div class="testimonial-content">
-                        <p>"Antes da Fluxos Smart, gastávamos 25 horas semanais processando documentos manualmente. Agora, são apenas 4 horas, e nossa equipe contábil finalmente consegue focar em análises estratégicas."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="src/img/client1.jpg" alt="Carlos Mendes" class="lazy" data-src="src/img/client1.jpg">
-                        </div>
-                        <div class="author-info">
-                            <h4>Carlos Mendes</h4>
-                            <p>Diretor Financeiro, Distribuidora Central</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Nosso atendimento ao cliente melhorou drasticamente. O assistente responde 78% das dúvidas instantaneamente, e nossos atendentes humanos agora focam nos casos realmente complexos. A satisfação do cliente aumentou 40%."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="src/img/client2.jpg" alt="Ana Oliveira" class="lazy" data-src="src/img/client2.jpg">
-                        </div>
-                        <div class="author-info">
-                            <h4>Ana Oliveira</h4>
-                            <p>Gerente de Atendimento, Loja Virtual Express</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Implementamos o Agente de Agendamento e os no-shows caíram de 28% para apenas 8%. O investimento se pagou no primeiro mês."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="src/img/client3.jpg" alt="Dr. Paulo Souza" class="lazy" data-src="src/img/client3.jpg">
-                        </div>
-                        <div class="author-info">
-                            <h4>Dr. Paulo Souza</h4>
-                            <p>Proprietário, Clínica Bem Estar</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-controls">
-                <button class="testimonial-control active" data-index="0"></button>
-                <button class="testimonial-control" data-index="1"></button>
-                <button class="testimonial-control" data-index="2"></button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Calculadora ROI Section -->
-    <section class="roi-calculator-section">
-        <div class="container">
-            <h2 class="section-title">Calcule sua economia com a Fluxos Smart</h2>
-            
-            <div class="calculator-container">
-                <div class="calculator-form">
-                    <div class="form-group">
-                        <label for="process-type">Selecione o processo a automatizar:</label>
-                        <select id="process-type" class="form-control">
-                            <option value="atendimento">Atendimento ao Cliente</option>
-                            <option value="documentos">Processamento de Documentos</option>
-                            <option value="agendamento">Agendamento e Lembretes</option>
-                            <option value="relatorios">Relatórios e Dashboards</option>
-                        </select>
+    <section class="py-16 md:py-24 bg-gradient-to-br from-light to-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 animate__animated animate__fadeInUp">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                        Transforme sua operação com <span class="gradient-text">Agentes de IA</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Automatize processos complexos, reduza custos em até 40% e escale seu negócio com nossa plataforma inteligente.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
+                        <a href="#cta" class="bg-primary text-white px-8 py-3 rounded-lg font-medium text-center hover:bg-primary-dark transition">
+                            Teste Grátis por 15 Dias
+                        </a>
+                        <a href="#video-demo" class="flex items-center justify-center text-primary font-medium">
+                            <span class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-3">
+                                <i class="fas fa-play text-primary"></i>
+                            </span>
+                            Assista ao vídeo
+                        </a>
                     </div>
                     
-                    <div class="form-group">
-                        <label for="process-volume">Número de processos mensais:</label>
-                        <input type="range" id="process-volume" min="100" max="5000" step="100" value="500" class="form-range">
-                        <div class="range-value"><span id="volume-display">500</span> processos/mês</div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="time-spent">Tempo médio gasto atualmente (minutos):</label>
-                        <input type="range" id="time-spent" min="5" max="60" step="5" value="15" class="form-range">
-                        <div class="range-value"><span id="time-display">15</span> minutos/processo</div>
+                    <div class="flex flex-wrap gap-6">
+                        <div class="flex items-center">
+                            <div class="text-3xl font-bold text-primary mr-2">+850</div>
+                            <div class="text-gray-500">Clientes</div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="text-3xl font-bold text-primary mr-2">40%</div>
+                            <div class="text-gray-500">Economia Média</div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="text-3xl font-bold text-primary mr-2">94%</div>
+                            <div class="text-gray-500">Satisfação</div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="calculator-result">
-                    <h3>Sua economia estimada:</h3>
-                    <div class="result-value" id="savings-result">R\$ 12.500,00/mês</div>
-                    <div class="result-annual">
-                        <span>Economia anual: </span>
-                        <span id="annual-roi">R\$ 150.000,00/ano</span>
+                <div class="md:w-1/2 relative animate__animated animate__fadeIn">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Dashboard IAgentics" class="rounded-xl shadow-xl w-full max-w-lg mx-auto">
+                    
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg w-48 animate-float">
+                        <div class="flex items-center text-green-500 mb-2">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span class="text-sm font-medium">Processamento concluído</span>
+                        </div>
+                        <p class="text-xs text-gray-500">Documento NF-1234</p>
                     </div>
-                    <p class="result-note">Baseado nos valores informados e na média de custo operacional de PMEs brasileiras.</p>
-                    <a href="contato.html" class="btn btn-primary">Cálculo detalhado com especialista</a>
+                    
+                    <div class="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-lg w-48 animate-float-2">
+                        <div class="flex items-center text-primary mb-2">
+                            <i class="fas fa-chart-line mr-2"></i>
+                            <span class="text-sm font-medium">+37% produtividade</span>
+                        </div>
+                        <p class="text-xs text-gray-500">Últimos 30 dias</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Clientes Section -->
-    <section class="clients-section">
-        <div class="container">
-            <h2 class="section-title">Empresas que confiam na Fluxos Smart</h2>
+    <!-- Logos Clientes -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <p class="text-center text-gray-500 mb-8">Trusted by innovative companies</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70">
+                <img src="https://via.placeholder.com/120x40?text=LOGO+1" alt="Cliente 1" class="h-8">
+                <img src="https://via.placeholder.com/120x40?text=LOGO+2" alt="Cliente 2" class="h-8">
+                <img src="https://via.placeholder.com/120x40?text=LOGO+3" alt="Cliente 3" class="h-8">
+                <img src="https://via.placeholder.com/120x40?text=LOGO+4" alt="Cliente 4" class="h-8">
+                <img src="https://via.placeholder.com/120x40?text=LOGO+5" alt="Cliente 5" class="h-8">
+            </div>
+        </div>
+    </section>
+
+    <!-- Soluções -->
+    <section id="solutions" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary bg-opacity-10 rounded-full mb-4">Soluções</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Agentes Especializados para Cada Necessidade</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Nossos agentes de IA são treinados para resolver desafios específicos do seu negócio</p>
+            </div>
             
-            <div class="clients-grid">
-                <div class="client-logo"><img src="src/img/client-logo1.png" alt="Cliente 1" class="lazy" data-src="src/img/client-logo1.png"></div>
-                <div class="client-logo"><img src="src/img/client-logo2.png" alt="Cliente 2" class="lazy" data-src="src/img/client-logo2.png"></div>
-                <div class="client-logo"><img src="src/img/client-logo3.png" alt="Cliente 3" class="lazy" data-src="src/img/client-logo3.png"></div>
-                <div class="client-logo"><img src="src/img/client-logo4.png" alt="Cliente 4" class="lazy" data-src="src/img/client-logo4.png"></div>
-                <div class="client-logo"><img src="src/img/client-logo5.png" alt="Cliente 5" class="lazy" data-src="src/img/client-logo5.png"></div>
-                <div class="client-logo"><img src="src/img/client-logo6.png" alt="Cliente 6" class="lazy" data-src="src/img/client-logo6.png"></div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="p-8">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-6">
+                            <i class="fas fa-headset text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Atendimento Inteligente</h3>
+                        <p class="text-gray-600 mb-6">Agente 24/7 que resolve 80% das dúvidas comuns e escala questões complexas para sua equipe.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span class="text-gray-600">WhatsApp, Telegram e Web</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Suporte multilíngue</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Análise de sentimento</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center text-primary font-medium">
+                            Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Card 2 (Destaque) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition border-2 border-primary relative">
+                    <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">Mais Popular</div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-6">
+                            <i class="fas fa-file-alt text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Processamento de Documentos</h3>
+                        <p class="text-gray-600 mb-6">Extraia e organize dados de notas fiscais, contratos e relatórios com precisão de 99%.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Reconhecimento de texto</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Validação automática</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Integração com ERPs</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center text-primary font-medium">
+                            Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="p-8">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-6">
+                            <i class="fas fa-calendar-check text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Agendamento Automático</h3>
+                        <p class="text-gray-600 mb-6">Reduza faltas em até 65% com confirmações inteligentes e reagendamento automático.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Multiplataforma</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Pagamento integrado</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Lembretes personalizados</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center text-primary font-medium">
+                            Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block px-6 py-3 border border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition">
+                    Ver todas soluções
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <span class="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary bg-opacity-10 rounded-full mb-4">Diferenciais</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Por que a IAgentics é a escolha certa para sua empresa</h2>
+                    
+                    <div class="space-y-8">
+                        <!-- Item 1 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-6">
+                                <div class="w-12 h-12 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary">
+                                    <i class="fas fa-bolt text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Implementação Rápida</h3>
+                                <p class="text-gray-600">Tenha seu agente funcionando em até 72 horas, sem necessidade de equipe técnica especializada.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-6">
+                                <div class="w-12 h-12 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary">
+                                    <i class="fas fa-lock text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Segurança de Dados</h3>
+                                <p class="text-gray-600">Infraestrutura 100% em nuvem AWS com criptografia de ponta a ponta e compliance com LGPD.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 3 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-6">
+                                <div class="w-12 h-12 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary">
+                                    <i class="fas fa-cogs text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Integração Fácil</h3>
+                                <p class="text-gray-600">Conectores prontos para os principais sistemas do mercado: ERP, CRM, WhatsApp Business e mais.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Dashboard IAgentics" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Setores -->
+    <section id="industries" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary bg-opacity-10 rounded-full mb-4">Setores</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Soluções Adaptadas para Seu Segmento</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Nossos agentes são personalizados para as necessidades específicas de cada indústria</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Setor 1 -->
+                <div class="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
+                        <i class="fas fa-shopping-cart text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Varejo & E-commerce</h3>
+                    <p class="text-gray-600 mb-4">Atendimento personalizado, gestão de pedidos e automação de pós-venda.</p>
+                    <a href="#" class="inline-flex items-center text-primary font-medium text-sm">
+                        Casos de uso <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Setor 2 -->
+                <div class="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
+                        <i class="fas fa-heartbeat text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Saúde & Bem-estar</h3>
+                    <p class="text-gray-600 mb-4">Agendamento inteligente, lembretes de medicamentos e triagem inicial.</p>
+                    <a href="#" class="inline-flex items-center text-primary font-medium text-sm">
+                        Casos de uso <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Setor 3 -->
+                <div class="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Serviços Financeiros</h3>
+                    <p class="text-gray-600 mb-4">Processamento de documentos, análise de crédito e atendimento regulatório.</p>
+                    <a href="#" class="inline-flex items-center text-primary font-medium text-sm">
+                        Casos de uso <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Setor 4 -->
+                <div class="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
+                        <i class="fas fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Educação</h3>
+                    <p class="text-gray-600 mb-4">Suporte ao aluno, gestão de matrículas e automação administrativa.</p>
+                    <a href="#" class="inline-flex items-center text-primary font-medium text-sm">
+                        Casos de uso <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Casos de Sucesso -->
+    <section id="cases" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary bg-opacity-10 rounded-full mb-4">Resultados</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Transformação Real com a IAgentics</h2>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Case 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Case 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <img src="https://via.placeholder.com/120x40?text=Cliente+1" alt="Cliente 1" class="h-8">
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Redução de 72% no tempo de atendimento</h3>
+                        <p class="text-gray-600 mb-6">Como a rede Dermacare automatizou 85% das interações com pacientes e aumentou a satisfação em 40%.</p>
+                        
+                        <div class="flex space-x-8 mb-6">
+                            <div>
+                                <div class="text-2xl font-bold text-primary">72%</div>
+                                <div class="text-sm text-gray-500">Redução no tempo</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-primary">40%</div>
+                                <div class="text-sm text-gray-500">Satisfação</div>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="inline-flex items-center text-primary font-medium">
+                            Ver estudo completo <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Case 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Case 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <img src="https://via.placeholder.com/120x40?text=Cliente+2" alt="Cliente 2" class="h-8">
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Economia de R$ 150 mil/ano em processos</h3>
+                        <p class="text-gray-600 mb-6">Como a Contabilidade Moderna eliminou 90% do trabalho manual com notas fiscais.</p>
+                        
+                        <div class="flex space-x-8 mb-6">
+                            <div>
+                                <div class="text-2xl font-bold text-primary">90%</div>
+                                <div class="text-sm text-gray-500">Menos trabalho manual</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-primary">150K</div>
+                                <div class="text-sm text-gray-500">Economia anual</div>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="inline-flex items-center text-primary font-medium">
+                            Ver estudo completo <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block px-6 py-3 border border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition">
+                    Ver todos os casos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary bg-opacity-10 rounded-full mb-4">Depoimentos</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">O que nossos clientes dizem</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"A IAgentics revolucionou nosso atendimento. Em 3 meses, conseguimos atender 3x mais clientes com a mesma equipe."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Silva" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Carlos Silva</h4>
+                            <p class="text-sm text-gray-500">Diretor Comercial, LojaTop</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"O processamento automático de documentos nos salvou. Antes tínhamos 2 pessoas dedicadas só a digitar notas fiscais."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana Oliveira" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ana Oliveira</h4>
+                            <p class="text-sm text-gray-500">Gerente Financeira, Distribuidora ABC</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 3 -->
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Implementamos em nossa clínica e reduzimos as faltas de 30% para apenas 8%. O ROI foi imediato."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Dr. Paulo Rocha" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Dr. Paulo Rocha</h4>
+                            <p class="text-sm text-gray-500">Clínica Bem Estar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preços -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary bg-opacity-10 rounded-full mb-4">Preços</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Planos Acessíveis para Cada Necessidade</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Sem taxas ocultas - Cancele quando quiser</p>
+            </div>
+            
+            <div class="flex justify-center items-center mb-12">
+                <span class="font-medium mr-3">Mensal</span>
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" class="sr-only peer">
+                    <div class="w-14 h-7 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+                </label>
+                <span class="font-medium ml-3">Anual <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-0.5 rounded ml-1">20% off</span></span>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Plano Básico -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2">Básico</h3>
+                        <p class="text-gray-600 mb-6">Para pequenos negócios começando com automação</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">R$ 497</span>
+                            <span class="text-gray-500">/mês</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>1 Agente de IA</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Até 1.000 interações/mês</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Suporte por e-mail</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>2 Integrações básicas</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Relatórios simples</span>
+                            </li>
+                        </ul>
+                        <a href="#cta" class="block w-full py-3 px-6 border border-primary text-primary font-medium rounded-lg text-center hover:bg-primary hover:text-white transition">
+                            Começar agora
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Plano Profissional (Destaque) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-primary relative">
+                    <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">Mais Popular</div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2">Profissional</h3>
+                        <p class="text-gray-600 mb-6">Para empresas em crescimento</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">R$ 997</span>
+                            <span class="text-gray-500">/mês</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Até 3 Agentes de IA</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Até 5.000 interações/mês</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Suporte prioritário</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>5 Integrações</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Relatórios avançados</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Treinamento online</span>
+                            </li>
+                        </ul>
+                        <a href="#cta" class="block w-full py-3 px-6 bg-primary text-white font-medium rounded-lg text-center hover:bg-primary-dark transition">
+                            Começar agora
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Plano Empresarial -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2">Empresarial</h3>
+                        <p class="text-gray-600 mb-6">Solução completa para grandes demandas</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">R$ 2.497</span>
+                            <span class="text-gray-500">/mês</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Agentes ilimitados</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Interações ilimitadas</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Suporte 24/7</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Integrações ilimitadas</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Analytics premium</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Consultoria mensal</span>
+                            </li>
+                        </ul>
+                        <a href="#cta" class="block w-full py-3 px-6 border border-primary text-primary font-medium rounded-lg text-center hover:bg-primary hover:text-white transition">
+                            Fale conosco
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8 text-gray-500">
+                <p>Todos os planos incluem teste grátis de 15 dias. Preços em reais, sem impostos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparação -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Compare com Soluções Tradicionais</h2>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="pb-4 font-bold">Recurso</th>
+                            <th class="pb-4 font-bold">IAgentics</th>
+                            <th class="pb-4 font-bold">Desenvolvimento Customizado</th>
+                            <th class="pb-4 font-bold">Plataformas Genéricas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-100">
+                            <td class="py-4 font-medium">Tempo de implementação</td>
+                            <td class="py-4"><i class="fas fa-check text-green-500 mr-2"></i> Dias</td>
+                            <td class="py-4"><i class="fas fa-times text-red-500 mr-2"></i> Meses</td>
+                            <td class="py-4"><i class="fas fa-check text-green-500 mr-2"></i> Semanas</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="py-4 font-medium">Custo inicial</td>
+                            <td class="py-4"><i class="fas fa-check text-green-500 mr-2"></i> Baixo</td>
+                            <td class="py-4"><i class="fas fa-times text-red-500 mr-2"></i> Alto</td>
+                            <td class="py-4"><i class="fas fa-check text-green-500 mr-2"></i> Médio</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="py-4 font-medium">Personalização</td>
+                            <td class="py-4"><i class="fas fa-check text-green-500 mr-2"></i> Alta</td>
+                            <td class="py-4"><i class="fas fa-check text-green-500 mr-2"></i> Total</td>
+                            <td class="py-4"><i class="fas fa-times text-red-500 mr-2"></i> Baixa</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="py-4 font-medium">Manutenção</td>
+                            <td class="py-4"><i class="fas fa-check text-green-500 mr-2"></i> Incluída</td>
+                            <td class="py-4"><i class="fas fa-times text-red-500 mr-2"></i> Custo extra</td>
+                            <td class="py-4"><i class="fas fa-check text-green-500 mr-2"></i> Incluída</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 font-medium">Escalabilidade</td>
+                            <td class="py-4"><i class="fas fa-check text-green-500 mr-2"></i> Automática</td>
+                            <td class="py-4"><i class="fas fa-check text-green-500 mr-2"></i> Complexa</td>
+                            <td class="py-4"><i class="fas fa-check text-green-500 mr-2"></i> Limitada</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2 class="cta-title">Pronto para transformar sua operação?</h2>
-            <p class="cta-subtitle">Comece hoje mesmo com 14 dias grátis, sem compromisso</p>
-            
-            <div class="cta-buttons">
-                <a href="contato.html" class="btn btn-primary btn-lg">Iniciar Trial Gratuito</a>
-                <a href="contato.html" class="btn btn-outline btn-lg">Falar com Consultor</a>
+    <section id="cta" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para transformar seu negócio?</h2>
+                    <p class="text-lg mb-8 opacity-90">Comece seu teste gratuito de 15 dias e experimente os benefícios da automação inteligente.</p>
+                    
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check mr-3"></i>
+                            <span>Sem cartão de crédito necessário</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check mr-3"></i>
+                            <span>Suporte completo durante o trial</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check mr-3"></i>
+                            <span>Cancele a qualquer momento</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 bg-white rounded-xl p-8 shadow-lg">
+                    <form id="lead-form">
+                        <div class="mb-4">
+                            <input type="text" id="name" placeholder="Seu nome completo" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" id="email" placeholder="Seu melhor e-mail" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="tel" id="phone" placeholder="WhatsApp (opcional)" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <select id="business-type" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                <option value="" disabled selected>Seu segmento de atuação</option>
+                                <option value="retail">Varejo/E-commerce</option>
+                                <option value="services">Serviços</option>
+                                <option value="healthcare">Saúde</option>
+                                <option value="education">Educação</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-primary-dark transition">
+                            Começar Teste Grátis
+                        </button>
+                        <p class="text-xs text-gray-500 mt-3 text-center">
+                            Ao clicar, você concorda com nossos <a href="#" class="text-primary underline">Termos de Serviço</a> e <a href="#" class="text-primary underline">Política de Privacidade</a>.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary bg-opacity-10 rounded-full mb-4">FAQ</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Perguntas Frequentes</h2>
             </div>
             
-            <a href="contato.html" class="text-link">Veja nossos planos e preços</a>
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-4 border-b border-gray-200 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-medium text-lg">
+                        <span>Quanto tempo leva para implementar?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
+                        <p>Nossos agentes padrão podem ser implementados em 2-3 dias úteis. Soluções personalizadas podem levar de 1 a 3 semanas dependendo da complexidade. Fornecemos um roadmap claro desde o início.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="mb-4 border-b border-gray-200 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-medium text-lg">
+                        <span>Preciso de equipe técnica para usar?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
+                        <p>Não. Nossa plataforma foi projetada para usuários não técnicos. Nossa equipe cuida de toda a implementação e oferecemos treinamento completo. Para integrações complexas, podemos indicar parceiros especializados.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="mb-4 border-b border-gray-200 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-medium text-lg">
+                        <span>Como é calculado o número de interações?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
+                        <p>Cada troca com um agente (pergunta-resposta) conta como 1 interação. Processamento de documentos conta como 5 interações por página. Relatórios automáticos contam 10 interações por execução. Monitoramos seu uso e alertamos antes de ultrapassar seu plano.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="mb-4 border-b border-gray-200 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-medium text-lg">
+                        <span>Quais garantias de segurança vocês oferecem?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
+                        <p>Utilizamos criptografia AES-256, servidores em data centers certificados ISO 27001 no Brasil, backups diários e compliance completo com LGPD. Oferecemos NDA e podemos assinar contratos de confidencialidade quando necessário.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="mb-4 border-b border-gray-200 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-medium text-lg">
+                        <span>Posso migrar de plano facilmente?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
+                        <p>Sim, você pode mudar de plano a qualquer momento sem custos adicionais. Upgrade é imediato, downgrade ocorre no próximo ciclo de faturamento. Nossa equipe ajuda no processo para garantir continuidade.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 6 -->
+                <div class="mb-4 border-b border-gray-200 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-medium text-lg">
+                        <span>Vocês oferecem suporte em português?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-3 text-gray-600 hidden">
+                        <p>Sim, todo nosso suporte é em português por equipe local. Oferecemos suporte por e-mail para todos os clientes, chat online para planos Professional e Enterprise, e telefone/Slack para planos Enterprise.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p>Ainda com dúvidas? <a href="contato.html" class="text-primary font-medium underline">Fale com nosso time</a></p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <img src="src/img/logo-white.png" alt="Fluxos Smart" class="lazy" data-src="src/img/logo-white.png">
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-5 gap-8 mb-12">
+                <!-- Coluna 1 -->
+                <div class="md:col-span-2">
+                    <div class="mb-6">
+                        <span class="text-2xl font-bold gradient-text">IAgentics</span>
                     </div>
-                    <p class="footer-tagline">Automatização inteligente para pequenas e médias empresas</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <p class="text-gray-400 mb-6">A IAgentics ajuda pequenas e médias empresas a automatizar processos e reduzir custos com agentes de IA especializados.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
                     </div>
                 </div>
                 
-                <div class="footer-column">
-                    <h3 class="footer-title">Soluções</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Assistente de Atendimento</a></li>
-                        <li><a href="#">Processador de Documentos</a></li>
-                        <li><a href="#">Agente de Agendamento</a></li>
-                        <li><a href="#">Automatizador de Relatórios</a></li>
-                        <li><a href="#">Assistente de Recrutamento</a></li>
+                <!-- Coluna 2 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Soluções</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Atendimento Inteligente</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Processamento de Documentos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Agendamento Automático</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Automação de Relatórios</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Ver todas soluções</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-column">
-                    <h3 class="footer-title">Empresa</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Sobre Nós</a></li>
-                        <li><a href="#">Como Funciona</a></li>
-                        <li><a href="#">Casos de Sucesso</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="contato.html">Contato</a></li>
+                <!-- Coluna 3 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Empresa</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Sobre Nós</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Casos de Sucesso</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Carreiras</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contato</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-column">
-                    <div class="newsletter">
-                        <h4>Receba novidades</h4>
-                        <form class="newsletter-form">
-                            <input type="email" placeholder="Seu e-mail" required>
-                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                        </form>
-                    </div>
+                <!-- Coluna 4 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Recursos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Central de Ajuda</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Integrações</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Documentação API</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Status do Serviço</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Atualizações</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Coluna 5 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Termos de Serviço</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Política de Privacidade</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">LGPD</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Segurança</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Compliance</a></li>
+                    </ul>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <div class="copyright">
-                    &copy; 2025 Fluxos Smart. Todos os direitos reservados.
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0 text-gray-400">
+                    &copy; 2025 IAgentics. Todos os direitos reservados.
                 </div>
-                <div class="footer-legal">
-                    <a href="#">Termos de Uso</a>
-                    <a href="#">Política de Privacidade</a>
-                    <a href="#">LGPD</a>
+                <div class="text-gray-400">
+                    <span>Desenvolvido com <i class="fas fa-heart text-red-400"></i> no Brasil</span>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- WhatsApp Float -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/5511999999999" target="_blank" class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-green-600 transition">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
     <!-- Video Modal -->
-    <div class="modal" id="video-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="video-container">
-                <iframe width="560" height="315" src="" title="Fluxos Smart Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div id="video-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 opacity-0 pointer-events-none transition-opacity">
+        <div class="relative bg-white rounded-lg w-full max-w-4xl mx-4">
+            <button id="close-modal" class="absolute -top-12 right-0 text-white text-3xl focus:outline-none">
+                &times;
+            </button>
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe id="video-frame" class="w-full h-96 rounded-lg" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>
 
-    <!-- JavaScript -->
-   <!-- JavaScript principal deve vir por último para garantir que o DOM já foi carregado -->
-<script src="src/js/main.js"></script>
-<script src="src/js/animations.js"></script>
-<script src="src/js/whatsapp-widget.js"></script>
-<script src="src/js/analytics.js"></script>
-<!-- Remova o form-handler.js se a validação já está no main.js -->
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <!-- Scripts -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID'); // Substitua pelo seu ID real
-    </script>
-
-    <!-- Schema Markup para SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Fluxos Smart",
-      "description": "Automatização inteligente para pequenas e médias empresas",
-      "url": "https://www.fluxossmart.com.br",
-      "logo": "https://www.fluxossmart.com.br/src/img/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+55-11-99999-9999",
-        "contactType": "customer service"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/fluxossmart",
-        "https://www.instagram.com/fluxossmart"
-      ]
-    }
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Video Modal
+        const videoModal = document.getElementById('video-modal');
+        const openVideoButtons = document.querySelectorAll('[href="#video-demo"]');
+        const closeModalButton = document.getElementById('close-modal');
+        const videoFrame = document.getElementById('video-frame');
+        
+        openVideoButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                videoFrame.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1';
+                videoModal.classList.add('active');
+                videoModal.classList.remove('opacity-0');
+                videoModal.classList.remove('pointer-events-none');
+            });
+        });
+        
+        closeModalButton.addEventListener('click', () => {
+            videoModal.classList.remove('active');
+            videoModal.classList.add('opacity-0');
+            videoModal.classList.add('pointer-events-none');
+            videoFrame.src = '';
+        });
+        
+        // Form Submission
+        const leadForm = document.getElementById('lead-form');
+        
+        leadForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Aqui você pode adicionar o código para enviar o formulário
+            alert('Formulário enviado com sucesso! Entraremos em contato em breve.');
+            leadForm.reset();
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
