@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casos de Uso - Agentics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Menu Superior -->
+    <nav class="bg-white shadow-sm py-4 px-6 flex justify-between items-center">
+        <div class="text-2xl font-bold text-indigo-600">Agentics</div>
+        <div class="hidden md:flex space-x-8">
+            <a href="#" class="text-gray-500 hover:text-indigo-600">Soluções</a>
+            <a href="#" class="text-gray-500 hover:text-indigo-600">Setores</a>
+            <a href="#" class="text-indigo-600 font-medium">Casos</a>
+            <a href="#" class="text-gray-500 hover:text-indigo-600">Preços</a>
+            <a href="#" class="text-gray-500 hover:text-indigo-600">Sobre</a>
+        </div>
+        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">Entrar</button>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">Casos de Uso por Setor</h1>
+        <p class="text-gray-600 mb-12">Descubra como nossas soluções podem transformar seu negócio</p>
+
+        <!-- Varejo & E-commerce -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+            <div class="p-8">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-2">Varejo & E-commerce</h2>
+                        <p class="text-gray-600 mb-4">Atendimento personalizado, gestão de pedidos e automação de pós-venda</p>
+                    </div>
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">Mais popular</span>
+                </div>
+                
+                <div class="mt-6 grid md:grid-cols-3 gap-6">
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Atendimento Personalizado</h3>
+                        <p class="text-gray-600">Chatbot que recomenda produtos baseado no histórico de navegação e compras anteriores, aumentando a conversão em 35%.</p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Gestão de Pedidos</h3>
+                        <p class="text-gray-600">Automatização do acompanhamento de pedidos com atualizações em tempo real para o cliente, reduzindo em 60% as perguntas sobre status.</p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Pós-Venda Automatizado</h3>
+                        <p class="text-gray-600">Sistema de pesquisa de satisfação e programa de fidelidade integrado, aumentando a retenção de clientes em 45%.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Saúde & Bem-estar -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Saúde & Bem-estar</h2>
+                <p class="text-gray-600 mb-6">Agendamento inteligente, lembretes de medicamentos e triagem inicial</p>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Agendamento Inteligente</h3>
+                        <p class="text-gray-600">Sistema que prioriza consultas por urgência e otimiza a agenda médica, reduzindo o tempo ocioso em 30%.</p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Lembretes de Medicamentos</h3>
+                        <p class="text-gray-600">Alertas personalizados via WhatsApp e SMS para horários de medicação, melhorando a adesão ao tratamento em 50%.</p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Triagem Inicial</h3>
+                        <p class="text-gray-600">Questionário inteligente que direciona pacientes para os especialistas adequados, agilizando o atendimento em 40%.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Serviços Financeiros -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Serviços Financeiros</h2>
+                <p class="text-gray-600 mb-6">Processamento de documentos, análise de crédito e atendimento regulatório</p>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Processamento de Documentos</h3>
+                        <p class="text-gray-600">Reconhecimento e validação automática de documentos financeiros, reduzindo o tempo de análise em 75%.</p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Análise de Crédito</h3>
+                        <p class="text-gray-600">Avaliação automatizada de risco de crédito com machine learning, aumentando a precisão em 30%.</p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Atendimento Regulatório</h3>
+                        <p class="text-gray-600">Chatbot especializado em normas financeiras que auxilia clientes e colaboradores, reduzindo erros em 65%.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educação -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Educação</h2>
+                <p class="text-gray-600 mb-6">Suporte ao aluno, gestão de matrículas e automação administrativa</p>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Suporte ao Aluno</h3>
+                        <p class="text-gray-600">Assistente virtual que responde 80% das dúvidas acadêmicas 24/7, liberando tempo dos professores.</p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Gestão de Matrículas</h3>
+                        <p class="text-gray-600">Sistema automatizado que processa matrículas e rematrículas, reduzindo tempo de espera em 70%.</p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Automação Administrativa</h3>
+                        <p class="text-gray-600">Fluxos automatizados para processos burocráticos, liberando 20 horas semanais da equipe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
