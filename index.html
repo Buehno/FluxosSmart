@@ -239,12 +239,12 @@
     </div>
 
     <!-- Header -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md transition-all duration-300">
+    <header class="sticky top-0 z-50 bg-purple/90 backdrop-blur-md shadow-md transition-all duration-300">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between py-4">
                 <div class="logo">
                     <a href="index.html" class="flex items-center">
-                        <span class="text-2xl font-bold gradient-text font-heading">IAgentics</span>
+                        <img src="logo.png" alt="logoIAgentics" style="margin-top: -50%; margin-bottom: -52%; width: 35%;height: 50%;" >
                     </a>
                 </div>
                 
@@ -828,15 +828,7 @@
             
             // Simula nova mensagem após 3 segundos
             setTimeout(() => {
-                typingIndicator.style.display = 'none';
-                
-                const newMessage = document.createElement('div');
-                newMessage.className = 'chat-message ai-message';
-                newMessage.innerHTML = 'Posso ajudar em algo mais?';
-                newMessage.style.animation = 'fadeIn 0.3s ease-out';
-                
-                chatContainer.appendChild(newMessage);
-                chatContainer.scrollTop = chatContainer.scrollHeight;
+            
                 
                 // Mostra indicador de digitando novamente após 5 segundos
                 setTimeout(() => {
