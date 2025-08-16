@@ -272,10 +272,10 @@
         <!-- Mobile Menu -->
         <div class="mobile-menu hidden md:hidden bg-white py-4 px-4 shadow-lg">
             <div class="flex flex-col space-y-4">
-               <a href="#solutions" class="font-medium hover:text-primary transition">Soluções</a>
-                    <a href="#how-it-works" class="font-medium hover:text-primary transition">Como Funciona</a>
-                    <a href="casos.html" class="font-medium hover:text-primary transition">Casos</a>
-                    <a href="marketplace.html" class="font-medium hover:text-primary transition">Preços</a>
+                <a href="#solutions" class="block py-2 font-medium">Soluções</a>
+                <a href="#how-it-works" class="block py-2 font-medium">Como Funciona</a>
+                <a href="#cases" class="block py-2 font-medium">Casos</a>
+                <a href="#pricing" class="block py-2 font-medium">Preços</a>
               
                 <div class="pt-4 border-t border-gray-100">
                     <a href="login.html" class="block py-2 font-medium">Entrar</a>
@@ -299,7 +299,7 @@
                     
                     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
                         <a href="contato.html" class="gradient-bg text-white px-8 py-3 rounded-lg font-medium text-center hover:opacity-90 transition shadow-lg hover:shadow-primary/30 animate__animated animate__pulse animate__infinite animate__slower">
-                           Solicitar uma POC    
+                           Solicitar uma Demonstração  
                         </a>
                         <a href="#demo" class="flex items-center justify-center text-primary font-medium hover:text-secondary transition">
                             <span class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-3 hover:bg-opacity-20 transition">
@@ -321,59 +321,274 @@
                     </div>
                 </div>
                 
-                <div class="lg:w-1/2 relative animate__animated animate__fadeIn">
-                    <!-- Chatbot Demo -->
-                           <!-- Chatbot Demo -->
-                    <div class="chat-container gradient-border p-1 flex flex-col">
-                        <div class="chat-header">
-                            <h3 class="font-bold text-primary">Assistente Virtual IAgentics</h3>
-                            <p class="text-xs text-gray-500">Online agora</p>
-                        </div>
-                        
-                        <div class="chat-body">
-                            <div class="chat-message ai-message">
-                                Olá! Sou o assistente virtual da IAgentics. Como posso ajudar você hoje?
-                            </div>
-                            
-                            <div class="chat-message user-message">
-                                Quais serviços vocês oferecem para e-commerce?
-                            </div>
-                            
-                            <div class="chat-message ai-message">
-                                Para e-commerce, oferecemos:<br><br>
-                                1. Atendimento automático via chat<br>
-                                2. Processamento de pedidos<br>
-                                3. Atualização de status de entrega<br>
-                                4. Resolução de dúvidas frequentes<br><br>
-                                Posso te conectar com um especialista para detalhes.
-                            </div>
-                            
-                            <div class="chat-message user-message">
-                                Quanto custa para começar?
-                            </div>
-                            
-                            <div class="chat-message ai-message">
-                                Temos planos a partir de R$497/mês com teste grátis de 15 dias. 
-                                <div class="mt-4">
-                                    <a href="#cta" class="gradient-bg text-white px-6 py-2 rounded-lg font-medium text-center hover:opacity-90 transition inline-block">
-                                        Comece Agora
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="chat-footer">
-                            <div class="flex items-center bg-white rounded-full px-4 py-2 shadow-sm">
-                                <input type="text" placeholder="Digite sua mensagem..." class="flex-1 border-0 focus:ring-0 focus:outline-none">
-                                <button class="text-primary hover:text-secondary">
-                                    <i class="fas fa-paper-plane"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+             <div class="lg:w-1/2 relative animate__animated animate__fadeIn">
+    <!-- Chatbot Interativo com Loop -->
+    <div class="chatbot-loop-container gradient-border p-1 h-96">
+        <div class="chatbot-header bg-white p-4 border-b border-gray-200 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-8 h-8 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary mr-3">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-800">Assistente IAgentics</h3>
+                    <p class="text-xs text-gray-500">Online agora</p>
                 </div>
             </div>
+            <div class="flex space-x-1">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse" style="animation-delay: 0.2s"></span>
+                <span class="w-2 h-2 rounded-full bg-red-400 animate-pulse" style="animation-delay: 0.4s"></span>
+            </div>
         </div>
+        
+        <div class="chatbot-messages bg-gray-50 flex-1 overflow-y-auto p-4">
+            <!-- Mensagens serão adicionadas dinamicamente via JavaScript -->
+        </div>
+        
+        <div class="chatbot-input bg-white p-3 border-t border-gray-200 flex items-center">
+            <input type="text" placeholder="Digite sua mensagem..." class="flex-1 border-0 focus:ring-0 focus:outline-none text-sm" disabled>
+            <button class="text-gray-400 ml-2">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Estilos específicos para o chatbot em loop */
+    .chatbot-loop-container {
+        background: white;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 30px rgba(118, 7, 232, 0.1);
+    }
+    
+    .chatbot-messages {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .chatbot-message {
+        max-width: 80%;
+        padding: 10px 14px;
+        border-radius: 1rem;
+        animation: messageFadeIn 0.3s ease-out;
+        position: relative;
+    }
+    
+    .chatbot-message.ai {
+        align-self: flex-start;
+        background: white;
+        color: #4e027c;
+        border-bottom-left-radius: 0.25rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    
+    .chatbot-message.user {
+        align-self: flex-end;
+        background: linear-gradient(90deg, #7607e8 0%, #6c66f3 100%);
+        color: white;
+        border-bottom-right-radius: 0.25rem;
+    }
+    
+    .message-time {
+        font-size: 10px;
+        opacity: 0.7;
+        margin-top: 4px;
+        text-align: right;
+    }
+    
+    .typing-indicator {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        background: white;
+        border-radius: 18px;
+        width: fit-content;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        margin-bottom: 12px;
+    }
+    
+    .typing-dot {
+        width: 6px;
+        height: 6px;
+        background: #666;
+        border-radius: 50%;
+        margin: 0 2px;
+        animation: typingAnimation 1.4s infinite ease-in-out;
+    }
+    
+    @keyframes typingAnimation {
+        0%, 60%, 100% { transform: translateY(0); }
+        30% { transform: translateY(-3px); }
+    }
+    
+    @keyframes messageFadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .quick-reply {
+        display: inline-block;
+        background: rgba(118, 7, 232, 0.1);
+        border-radius: 16px;
+        padding: 6px 12px;
+        margin: 4px;
+        font-size: 12px;
+        color: #7607e8;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    
+    .quick-reply:hover {
+        background: rgba(118, 7, 232, 0.2);
+    }
+</style>
+
+<script>
+    // Simulação de conversa em loop
+    document.addEventListener('DOMContentLoaded', function() {
+        const messagesContainer = document.querySelector('.chatbot-messages');
+        
+        // Conversa pré-definida em loop
+        const conversation = [
+            {
+                sender: 'ai',
+                text: 'Olá! 👋 Sou o assistente virtual da IAgentics. Como posso te ajudar hoje?',
+                delay: 1000
+            },
+            {
+                sender: 'ai',
+                text: 'Você pode me perguntar sobre nossos serviços, preços ou como começar a usar.',
+                delay: 2000
+            },
+            {
+                sender: 'user',
+                text: 'Quais serviços vocês oferecem?',
+                delay: 3000
+            },
+            {
+                sender: 'ai',
+                text: 'Oferecemos agentes de IA especializados em:<br><br>' +
+                      '• Atendimento ao cliente 24/7<br>' +
+                      '• Processamento inteligente de documentos<br>' +
+                      '• Automação de processos financeiros<br>' +
+                      '• Agendamento e acompanhamento<br><br>' +
+                      '<span class="quick-reply">Quero saber sobre atendimento</span>' +
+                      '<span class="quick-reply">Como funciona o processamento?</span>',
+                delay: 2000
+            },
+            {
+                sender: 'user',
+                text: 'Quanto custa para começar?',
+                delay: 3000
+            },
+            {
+                sender: 'ai',
+                text: 'Temos planos a partir de R$497/mês com:<br><br>' +
+                      '• POC para testar<br>' +
+                      '• Configuração personalizada<br>' +
+                      '• Suporte dedicado<br><br>' +
+                      '<a href="#cta"><button class="gradient-bg text-white text-sm px-4 py-2 rounded-lg hover:opacity-90 transition">Agendar Demonstração</button></a>',
+                delay: 2000
+            },
+            {
+                sender: 'user',
+                text: 'Como faço para testar?',
+                delay: 5000
+            },
+            {
+                sender: 'ai',
+                text: 'É simples! Basta clicar em <a href="#cta"><button class="gradient-bg text-white text-sm px-4 py-2 rounded-lg hover:opacity-90 transition">Agendar Demonstração</button></a> e preencher o formulário. ' +
+                      'Nossa equipe entrará em contato em até 1 hora útil para configurar seu agente personalizado.',
+                delay: 4000
+            }
+        ];
+        
+        // Função para adicionar mensagem
+        function addMessage(sender, text) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chatbot-message ${sender}`;
+            
+            const now = new Date();
+            const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            
+            messageDiv.innerHTML = `
+                <div>${text}</div>
+                <div class="message-time">${timeString}</div>
+            `;
+            
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+        
+        // Função para mostrar indicador de digitando
+        function showTyping() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'typing-indicator';
+            typingDiv.innerHTML = `
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <span style="margin-left: 8px; font-size: 12px;">Digitando...</span>
+            `;
+            
+            messagesContainer.appendChild(typingDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            return typingDiv;
+        }
+        
+        // Função para executar a conversa em loop
+        function runConversation() {
+            let index = 0;
+            
+            function nextMessage() {
+                if (index >= conversation.length) {
+                    index = 0; // Reinicia a conversa
+                    // Limpa o chat antes de reiniciar
+                    setTimeout(() => {
+                        messagesContainer.innerHTML = '';
+                        nextMessage();
+                    }, 3000);
+                    return;
+                }
+                
+                const message = conversation[index];
+                
+                // Mostra indicador de digitando para mensagens do bot
+                if (message.sender === 'ai') {
+                    const typing = showTyping();
+                    setTimeout(() => {
+                        typing.remove();
+                        addMessage(message.sender, message.text);
+                        index++;
+                        setTimeout(nextMessage, conversation[index]?.delay || 1000);
+                    }, 1500);
+                } else {
+                    addMessage(message.sender, message.text);
+                    index++;
+                    setTimeout(nextMessage, message.delay);
+                }
+            }
+            
+            // Inicia a conversa
+            setTimeout(nextMessage, 1000);
+        }
+        
+        // Inicia o loop da conversa
+        runConversation();
+        
+        // Configura reinício automático
+        setInterval(() => {
+            if (messagesContainer.children.length > 15) {
+                messagesContainer.innerHTML = '';
+                runConversation();
+            }
+        }, 30000);
+    });
+</script>             
     </section>
 
     <!-- Soluções -->
