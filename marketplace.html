@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Nossos Agentes | IAgentics - Agentes de IA para PMEs</title>
+    <meta name="description" content="Conheça nossos agentes de IA prontos para uso ou crie um sob medida para suas necessidades específicas.">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7607e8',
+                        secondary: '#6c66f3',
+                        dark: '#4e027c',
+                        light: '#f8f8f8',
+                        gradient: {
+                            start: '#7607e8',
+                            end: '#6c66f3'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style type="text/css">
+        .gradient-text {
+            background: linear-gradient(90deg, #7607e8 0%, #6c66f3 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(90deg, #7607e8 0%, #6c66f3 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: translateY(-5px);
+        }
+        
+        .agent-card {
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+        
+        .agent-card:hover {
+            box-shadow: 0 10px 25px rgba(118, 7, 232, 0.1);
+            border-color: #7607e8;
+        }
+        
+        .feature-badge {
+            background: linear-gradient(90deg, rgba(118, 7, 232, 0.1) 0%, rgba(108, 102, 243, 0.1) 100%);
+            border: 1px solid rgba(118, 7, 232, 0.2);
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-light">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+               <div class="logo">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo.png" alt="logoIAgentics" style="margin-top: -50%; margin-bottom: -52%; width: 35%;height: 50%;" >
+                    </a>
+                </div>
+                
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="solutions.html" class="font-medium hover:text-primary transition">Soluções</a>
+                    <a href="industries.html" class="font-medium hover:text-primary transition">Setores</a>
+                    <a href="casos.html" class="font-medium hover:text-primary transition">Casos</a>
+                     <a href="marketplace.html" class="font-medium text-primary">Preços</a>
+         
+                </nav>
+                
+                <div class="hidden md:flex items-center space-x-4">
+                   
+                    <a href="#cta" class="gradient-bg text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition shadow-lg hover:shadow-primary/30">Comece Agora</a>
+                </div>
+                
+                <button class="mobile-menu-toggle md:hidden focus:outline-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#solutions" class="font-medium hover:text-primary transition">Soluções</a>
+                    <a href="#how-it-works" class="font-medium hover:text-primary transition">Como Funciona</a>
+                    <a href="casos.html" class="font-medium hover:text-primary transition">Casos</a>
+                    <a href="marketplace.html" class="font-medium hover:text-primary transition">Preços</a>
+                <div class="pt-4 border-t border-gray-100">
+                    <a href="#cta" class="block mt-2 gradient-bg text-white px-6 py-2 rounded-lg font-medium text-center">Comece Agora</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-light to-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 font-heading">Nossos <span class="gradient-text">Agentes de IA</span></h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Soluções prontas para uso imediato ou personalizadas para suas necessidades específicas</p>
+        </div>
+    </section>
+
+    <!-- Agents Content -->
+    <section class="py-12 md:py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <!-- Agentes de Prateleira -->
+            <div class="mb-20">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8">
+                    <div>
+                        <span class="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary bg-opacity-10 rounded-full mb-2">Soluções</span>
+                        <h2 class="text-3xl font-bold mb-2 font-heading">Agentes de Prateleira</h2>
+                        <p class="text-gray-600">Soluções prontas para implantação rápida, com configuração mínima necessária</p>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-primary font-medium mt-4 md:mt-0 group">
+                        Ver todos agentes <i class="fas fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
+                    </a>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Agent 1 -->
+                    <div class="agent-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-headset text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Atendente Virtual</h3>
+                        <p class="text-gray-600 mb-4">Chatbot inteligente para atendimento ao cliente 24/7, com integração a WhatsApp e site.</p>
+                        
+                        <div class="mb-4">
+                            <span class="text-sm font-medium text-gray-500">Principais recursos:</span>
+                            <ul class="mt-2 space-y-1">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Respostas instantâneas</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Integração multi-canal</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Base de conhecimento</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-primary font-medium">A partir de R$299/mês</span>
+                            <a href="#" class="text-sm font-medium text-primary hover:text-dark transition">Detalhes →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Agent 2 -->
+                    <div class="agent-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-calendar-alt text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Agendador Inteligente</h3>
+                        <p class="text-gray-600 mb-4">Automatize agendamentos, confirmações e lembretes para sua equipe e clientes.</p>
+                        
+                        <div class="mb-4">
+                            <span class="text-sm font-medium text-gray-500">Principais recursos:</span>
+                            <ul class="mt-2 space-y-1">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Sincronização com calendários</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Lembretes automáticos</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Pagamento integrado</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-primary font-medium">A partir de R$349/mês</span>
+                            <a href="#" class="text-sm font-medium text-primary hover:text-dark transition">Detalhes →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Agent 3 -->
+                    <div class="agent-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-file-invoice-dollar text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Assistente Financeiro</h3>
+                        <p class="text-gray-600 mb-4">Automatize cobranças, conciliações e relatórios financeiros básicos.</p>
+                        
+                        <div class="mb-4">
+                            <span class="text-sm font-medium text-gray-500">Principais recursos:</span>
+                            <ul class="mt-2 space-y-1">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Cobrança recorrente</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Conciliação bancária</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Relatórios automáticos</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-primary font-medium">A partir de R$399/mês</span>
+                            <a href="#" class="text-sm font-medium text-primary hover:text-dark transition">Detalhes →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 mt-8">
+                    <!-- Agent 4 -->
+                    <div class="agent-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-boxes text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Gestor de Estoque</h3>
+                        <p class="text-gray-600 mb-4">Controle automatizado de estoque com alertas e recomendações de reposição.</p>
+                        
+                        <div class="mb-4">
+                            <span class="text-sm font-medium text-gray-500">Principais recursos:</span>
+                            <ul class="mt-2 space-y-1">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Controle de inventário</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Alertas de reposição</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Integração com marketplaces</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-primary font-medium">A partir de R$379/mês</span>
+                            <a href="#" class="text-sm font-medium text-primary hover:text-dark transition">Detalhes →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Agent 5 -->
+                    <div class="agent-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Automatizador de E-mails</h3>
+                        <p class="text-gray-600 mb-4">Crie fluxos de e-mail automatizados para nutrição de leads e pós-venda.</p>
+                        
+                        <div class="mb-4">
+                            <span class="text-sm font-medium text-gray-500">Principais recursos:</span>
+                            <ul class="mt-2 space-y-1">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Modelos personalizáveis</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Segmentação de contatos</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Análise de engajamento</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-primary font-medium">A partir de R$279/mês</span>
+                            <a href="#" class="text-sm font-medium text-primary hover:text-dark transition">Detalhes →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Agent 6 -->
+                    <div class="agent-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-chart-line text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Analista de Dados</h3>
+                        <p class="text-gray-600 mb-4">Relatórios automáticos e insights baseados em dados do seu negócio.</p>
+                        
+                        <div class="mb-4">
+                            <span class="text-sm font-medium text-gray-500">Principais recursos:</span>
+                            <ul class="mt-2 space-y-1">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Dashboards personalizados</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Alertas de métricas</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                                    <span class="text-sm">Integração com principais ferramentas</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-primary font-medium">A partir de R$429/mês</span>
+                            <a href="#" class="text-sm font-medium text-primary hover:text-dark transition">Detalhes →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Agentes Sob Demanda -->
+            <div class="mb-20">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8">
+                    <div>
+                        <span class="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary bg-opacity-10 rounded-full mb-2">Soluções</span>
+                        <h2 class="text-3xl font-bold mb-2 font-heading">Agentes Sob Demanda</h2>
+                        <p class="text-gray-600">Soluções personalizadas desenvolvidas exclusivamente para suas necessidades</p>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-primary font-medium mt-4 md:mt-0 group">
+                        Ver todos casos <i class="fas fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
+                    </a>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Custom Solution 1 -->
+                    <div class="agent-card rounded-xl p-8 hover-scale bg-gradient-to-br from-light to-white">
+                        <div class="flex items-start mb-6">
+                            <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mr-4">
+                                <i class="fas fa-cogs text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Integração de Sistemas</h3>
+                                <p class="text-gray-600">Conectamos seus sistemas existentes com nossos agentes para um fluxo de trabalho perfeito.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <span class="text-sm font-medium text-gray-500">Casos de uso:</span>
+                            <div class="flex flex-wrap gap-2 mt-3">
+                                <span class="px-3 py-1 text-xs rounded-full feature-badge">ERP</span>
+                                <span class="px-3 py-1 text-xs rounded-full feature-badge">CRM</span>
+                                <span class="px-3 py-1 text-xs rounded-full feature-badge">Banco de Dados</span>
+                                <span class="px-3 py-1 text-xs rounded-full feature-badge">APIs</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Preço sob consulta</span>
+                            <a href="#" class="text-sm font-medium text-primary hover:text-dark transition">Solicitar orçamento →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Custom Solution 2 -->
+                    <div class="agent-card rounded-xl p-8 hover-scale bg-gradient-to-br from-light to-white">
+                        <div class="flex items-start mb-6">
+                            <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mr-4">
+                                <i class="fas fa-robot text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Automação de Processos</h3>
+                                <p class="text-gray-600">Automatizamos seus processos específicos para eliminar tarefas repetitivas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <span class="text-sm font-medium text-gray-500">Casos de uso:</span>
+                            <div class="flex flex-wrap gap-2 mt-3">
+                                <span class="px-3 py-1 text-xs rounded-full feature-badge">Workflows</span>
+                                <span class="px-3 py-1 text-xs rounded-full feature-badge">Aprovações</span>
+                                <span class="px-3 py-1 text-xs rounded-full feature-badge">Relatórios</span>
+                                <span class="px-3 py-1 text-xs rounded-full feature-badge">Notificações</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Preço sob consulta</span>
+                            <a href="#" class="text-sm font-medium text-primary hover:text-dark transition">Solicitar orçamento →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Custom Solution 3 -->
+                    <div class="agent-card rounded-xl p-8 hover-scale bg-gradient-to-br from-light to-white">
+                        <div class="flex items-start mb-6">
+                            <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mr-4">
+                                <i class="fas fa-brain text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Modelos Personalizados</h3>
+                                <p class="text-gray-600">Desenvolvemos modelos de IA treinados especificamente para seu negócio.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <span class="text-sm font-medium text-gray-500">Casos de uso:</span>
+                            <div class="flex flex-wrap gap-2 mt-3">
+                                <span class="px-3 py-1 text-xs rounded-full feature-badge">Classificação</span>
+                                <span class="px-3 py-1 text-xs rounded-full feature-badge">Previsão</span>
+                                <span class="px-3 py-1 text-xs rounded-full feature-badge">Recomendação</span>
+                                <span class="px-3 py-1 text-xs rounded-full feature-badge">Processamento</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Preço sob consulta</span>
+                            <a href="#" class="text-sm font-medium text-primary hover:text-dark transition">Solicitar orçamento →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Custom Solution 4 -->
+                    <div class="agent-card rounded-xl p-8 hover-scale bg-gradient-to-br from-light to-white">
+                        <div class="flex items-start mb-6">
+                            <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mr-4">
+                                <i class="fas fa-project-diagram text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Soluções Setoriais</h3>
+                                <p class="text-gray-600">Agentes especializados para necessidades específicas do seu setor.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <span class="text-sm font-medium text-gray-500">Casos de uso:</span>
+                            <div class="flex flex-wrap gap-2 mt-3">
+                                <span class="px-3 py-1 text-xs rounded-full feature-badge">Saúde</span>
+                                <span class="px-3 py-1 text-xs rounded-full feature-badge">Jurídico</span>
+                                <span class="px-3 py-1 text-xs rounded-full feature-badge">Educação</span>
+                                <span class="px-3 py-1 text-xs rounded-full feature-badge">Varejo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Preço sob consulta</span>
+                            <a href="#" class="text-sm font-medium text-primary hover:text-dark transition">Solicitar orçamento →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Comparison Section -->
+            <div class="bg-gradient-to-br from-light to-white rounded-xl p-8 md:p-12 mb-20">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4 font-heading">Qual é a melhor opção para você?</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Compare nossos agentes de prateleira com soluções sob demanda para encontrar o melhor ajuste</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold mb-4 text-center font-heading">Agentes de Prateleira</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Implantação rápida (horas ou dias)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Custo mensal previsível</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Funcionalidades padrão do mercado</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Atualizações automáticas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Ideal para necessidades comuns</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold mb-4 text-center font-heading">Agentes Sob Demanda</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Desenvolvimento personalizado (semanas)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Investimento inicial + custo mensal</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Funcionalidades exclusivas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Manutenção e evolução contínua</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Ideal para necessidades específicas</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <p class="text-gray-600 mb-6">Não tem certeza de qual opção escolher?</p>
+                    <a href="#" class="inline-block gradient-bg text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition shadow-lg hover-scale">
+                        Fale com um especialista
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 font-heading">Pronto para transformar seu negócio?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Nossos agentes de IA estão prontos para automatizar seus processos e impulsionar seus resultados.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="inline-block bg-white text-primary px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition shadow-lg hover-scale">
+                    Testar Agente Gratuito
+                </a>
+                <a href="#" class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:bg-opacity-10 transition shadow-lg hover-scale">
+                    Falar com Especialista
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Coluna 1 -->
+                <div>
+                    <div class="mb-6">
+                        <span class="text-2xl font-bold gradient-text font-heading">IAgentics</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Automação inteligente para pequenas e médias empresas.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Coluna 2 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Soluções</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Atendimento Automatizado</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Processamento de Documentos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Agendamento Inteligente</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Automação Financeira</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Coluna 3 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Empresa</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Sobre Nós</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Carreiras</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Coluna 4 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Recursos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Central de Ajuda</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Documentação</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Status do Serviço</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Atualizações</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0 text-gray-400">
+                    &copy; 2025 IAgentics. Todos os direitos reservados.
+                </div>
+                <div class="text-gray-400">
+                    <span>Desenvolvido com <i class="fas fa-heart text-primary"></i> no Brasil</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/5511999999999" target="_blank" class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-green-600 transition">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -3,198 +3,483 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casos de Uso - Agentics</title>
+    
+    <title>Casos de Sucesso | IAgentics - Agentes de IA para PMEs</title>
+    <meta name="description" content="Veja como nossos agentes de IA estão transformando negócios em diversos setores com casos reais de sucesso.">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7607e8',
+                        secondary: '#6c66f3',
+                        dark: '#4e027c',
+                        light: '#f8f8f8',
+                        gradient: {
+                            start: '#7607e8',
+                            end: '#6c66f3'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style type="text/css">
+        .gradient-text {
+            background: linear-gradient(90deg, #7607e8 0%, #6c66f3 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(90deg, #7607e8 0%, #6c66f3 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: translateY(-5px);
+        }
+        
+        .case-card {
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+        
+        .case-card:hover {
+            box-shadow: 0 10px 25px rgba(118, 7, 232, 0.1);
+            border-color: #7607e8;
         }
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Menu Superior -->
-    <nav class="bg-white shadow-sm py-4 px-6 flex justify-between items-center">
-        <div class="text-2xl font-bold text-indigo-600">Agentics</div>
-        <div class="hidden md:flex space-x-8">
-            <a href="#" class="text-gray-500 hover:text-indigo-600">Soluções</a>
-            <a href="#" class="text-gray-500 hover:text-indigo-600">Setores</a>
-            <a href="#" class="text-indigo-600 font-medium">Casos</a>
-            <a href="#" class="text-gray-500 hover:text-indigo-600">Preços</a>
-            <a href="#" class="text-gray-500 hover:text-indigo-600">Sobre</a>
+<body class="font-sans text-dark bg-light">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center justify-between py-4">
+                <div class="logo">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo.png" alt="logoIAgentics" style="margin-top: -50%; margin-bottom: -52%; width: 35%;height: 50%;" >
+                    </a>
+                </div>
+                
+                 <nav class="hidden md:flex items-center space-x-8">
+                    <a href="solutions.html" class="font-medium hover:text-primary transition">Soluções</a>
+                    <a href="industries.html" class="font-medium hover:text-primary transition">Setores</a>
+                    <a href="casos.html" class="font-medium text-primary">Casos</a>
+                    <a href="marketplace.html" class="font-medium hover:text-primary transition">Preço</a>
+         
+                </nav>
+                
+                <div class="hidden md:flex items-center space-x-4">
+                   
+                    <a href="#cta" class="gradient-bg text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition shadow-lg hover:shadow-primary/30" style="margin-left: 100px;">Comece Agora</a>
+                </div>
+                <button class="mobile-menu-toggle md:hidden focus:outline-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">Entrar</button>
-    </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="solutions.html" class="block py-2 font-medium">Soluções</a>
+                <a href="industries.html" class="block py-2 font-medium">Setores</a>
+                <a href="cases.html" class="block py-2 font-medium text-primary">Casos</a>
+                <a href="pricing.html" class="block py-2 font-medium">Preços</a>
+                <a href="about.html" class="block py-2 font-medium">Sobre</a>
+                <div class="pt-4 border-t border-gray-100">
+                    <a href="login.html" class="block py-2 font-medium">Entrar</a>
+                    <a href="#cta" class="block mt-2 gradient-bg text-white px-6 py-2 rounded-lg font-medium text-center">Comece Agora</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <!-- Conteúdo Principal -->
-    <div class="container mx-auto px-4 py-12 max-w-6xl">
-        <h1 class="text-3xl font-bold text-gray-800 mb-2">Casos de Uso por Setor</h1>
-        <p class="text-gray-600 mb-12">Descubra como nossas soluções podem transformar seu negócio</p>
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-light to-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 font-heading">Casos de Sucesso <span class="gradient-text">IAgentics</span></h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Descubra como nossos agentes de IA estão transformando negócios em diversos setores</p>
+        </div>
+    </section>
 
-        <!-- Varejo & E-commerce -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
-            <div class="p-8">
-                <div class="flex justify-between items-start">
+    <!-- Cases Content -->
+    <section class="py-12 md:py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <!-- Varejo & E-commerce -->
+            <div class="mb-20">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8">
                     <div>
-                        <h2 class="text-2xl font-bold text-gray-800 mb-2">Varejo & E-commerce</h2>
-                        <p class="text-gray-600 mb-4">Atendimento personalizado, gestão de pedidos e automação de pós-venda</p>
+                        <span class="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary bg-opacity-10 rounded-full mb-2">Setor</span>
+                        <h2 class="text-3xl font-bold mb-2 font-heading">Varejo & E-commerce</h2>
+                        <p class="text-gray-600">Atendimento personalizado, gestão de pedidos e automação de pós-venda</p>
                     </div>
-                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">Mais popular</span>
+                    <a href="marketplace.html" class="inline-flex items-center text-primary font-medium mt-4 md:mt-0 group">
+                        Ver Agentes <i class="fas fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
+                    </a>
                 </div>
                 
-                <div class="mt-6 grid md:grid-cols-3 gap-6">
-                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                        <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
-                            <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
-                            </svg>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Case 1 -->
+                    <div class="case-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-comments text-xl"></i>
                         </div>
-                        <h3 class="font-bold text-lg mb-2">Atendimento Personalizado</h3>
-                        <p class="text-gray-600">Chatbot que recomenda produtos baseado no histórico de navegação e compras anteriores, aumentando a conversão em 35%.</p>
+                        <h3 class="text-xl font-bold mb-3">Atendimento Personalizado</h3>
+                        <p class="text-gray-600 mb-4">Chatbot que recomenda produtos baseado no histórico de navegação e compras anteriores, aumentando a conversão em 35%.</p>
+                        <div class="flex items-center text-sm text-primary">
+                            <i class="fas fa-chart-line mr-2"></i>
+                            <span>+35% conversão</span>
+                        </div>
                     </div>
                     
-                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                        <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
-                            <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-                            </svg>
+                    <!-- Case 2 -->
+                    <div class="case-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-box-open text-xl"></i>
                         </div>
-                        <h3 class="font-bold text-lg mb-2">Gestão de Pedidos</h3>
-                        <p class="text-gray-600">Automatização do acompanhamento de pedidos com atualizações em tempo real para o cliente, reduzindo em 60% as perguntas sobre status.</p>
+                        <h3 class="text-xl font-bold mb-3">Gestão de Pedidos</h3>
+                        <p class="text-gray-600 mb-4">Automatização do acompanhamento de pedidos com atualizações em tempo real para o cliente, reduzindo em 60% as perguntas sobre status.</p>
+                        <div class="flex items-center text-sm text-primary">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>-60% tempo de atendimento</span>
+                        </div>
                     </div>
                     
-                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                        <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
-                            <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
+                    <!-- Case 3 -->
+                    <div class="case-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-smile text-xl"></i>
                         </div>
-                        <h3 class="font-bold text-lg mb-2">Pós-Venda Automatizado</h3>
-                        <p class="text-gray-600">Sistema de pesquisa de satisfação e programa de fidelidade integrado, aumentando a retenção de clientes em 45%.</p>
+                        <h3 class="text-xl font-bold mb-3">Pós-Venda Automatizado</h3>
+                        <p class="text-gray-600 mb-4">Sistema de pesquisa de satisfação e programa de fidelidade integrado, aumentando a retenção de clientes em 45%.</p>
+                        <div class="flex items-center text-sm text-primary">
+                            <i class="fas fa-users mr-2"></i>
+                            <span>+45% retenção</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Saúde & Bem-estar -->
+            <div class="mb-20">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8">
+                    <div>
+                        <span class="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary bg-opacity-10 rounded-full mb-2">Setor</span>
+                        <h2 class="text-3xl font-bold mb-2 font-heading">Saúde & Bem-estar</h2>
+                        <p class="text-gray-600">Agendamento inteligente, lembretes de medicamentos e triagem inicial</p>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-primary font-medium mt-4 md:mt-0 group">
+                        Ver todos casos <i class="fas fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
+                    </a>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Case 1 -->
+                    <div class="case-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-calendar-check text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Agendamento Inteligente</h3>
+                        <p class="text-gray-600 mb-4">Sistema que prioriza consultas por urgência e otimiza a agenda médica, reduzindo o tempo ocioso em 30%.</p>
+                        <div class="flex items-center text-sm text-primary">
+                            <i class="fas fa-calendar-minus mr-2"></i>
+                            <span>-30% tempo ocioso</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Case 2 -->
+                    <div class="case-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-bell text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Lembretes de Medicamentos</h3>
+                        <p class="text-gray-600 mb-4">Alertas personalizados via WhatsApp e SMS para horários de medicação, melhorando a adesão ao tratamento em 50%.</p>
+                        <div class="flex items-center text-sm text-primary">
+                            <i class="fas fa-pills mr-2"></i>
+                            <span>+50% adesão</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Case 3 -->
+                    <div class="case-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-clipboard-list text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Triagem Inicial</h3>
+                        <p class="text-gray-600 mb-4">Questionário inteligente que direciona pacientes para os especialistas adequados, agilizando o atendimento em 40%.</p>
+                        <div class="flex items-center text-sm text-primary">
+                            <i class="fas fa-stopwatch mr-2"></i>
+                            <span>-40% tempo de espera</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Serviços Financeiros -->
+            <div class="mb-20">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8">
+                    <div>
+                        <span class="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary bg-opacity-10 rounded-full mb-2">Setor</span>
+                        <h2 class="text-3xl font-bold mb-2 font-heading">Serviços Financeiros</h2>
+                        <p class="text-gray-600">Processamento de documentos, análise de crédito e atendimento regulatório</p>
+                    </div>
+                    <a href="marketplace.html" class="inline-flex items-center text-primary font-medium mt-4 md:mt-0 group">
+                        Ver Agentes <i class="fas fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
+                    </a>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Case 1 -->
+                    <div class="case-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-file-invoice text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Processamento de Documentos</h3>
+                        <p class="text-gray-600 mb-4">Reconhecimento e validação automática de documentos financeiros, reduzindo o tempo de análise em 75%.</p>
+                        <div class="flex items-center text-sm text-primary">
+                            <i class="fas fa-tachometer-alt mr-2"></i>
+                            <span>-75% tempo de análise</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Case 2 -->
+                    <div class="case-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-hand-holding-usd text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Análise de Crédito</h3>
+                        <p class="text-gray-600 mb-4">Avaliação automatizada de risco de crédito com machine learning, aumentando a precisão em 30%.</p>
+                        <div class="flex items-center text-sm text-primary">
+                            <i class="fas fa-bullseye mr-2"></i>
+                            <span>+30% precisão</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Case 3 -->
+                    <div class="case-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-gavel text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Atendimento Regulatório</h3>
+                        <p class="text-gray-600 mb-4">Chatbot especializado em normas financeiras que auxilia clientes e colaboradores, reduzindo erros em 65%.</p>
+                        <div class="flex items-center text-sm text-primary">
+                            <i class="fas fa-exclamation-triangle mr-2"></i>
+                            <span>-65% erros</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Educação -->
+            <div>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8">
+                    <div>
+                        <span class="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary bg-opacity-10 rounded-full mb-2">Setor</span>
+                        <h2 class="text-3xl font-bold mb-2 font-heading">Educação</h2>
+                        <p class="text-gray-600">Suporte ao aluno, gestão de matrículas e automação administrativa</p>
+                    </div>
+                    <a href="marketplace.html" class="inline-flex items-center text-primary font-medium mt-4 md:mt-0 group">
+                        Ver Agentes <i class="fas fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
+                    </a>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Case 1 -->
+                    <div class="case-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-user-graduate text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Suporte ao Aluno</h3>
+                        <p class="text-gray-600 mb-4">Assistente virtual que responde 80% das dúvidas acadêmicas 24/7, liberando tempo dos professores.</p>
+                        <div class="flex items-center text-sm text-primary">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>80% dúvidas resolvidas</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Case 2 -->
+                    <div class="case-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-clipboard-check text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Gestão de Matrículas</h3>
+                        <p class="text-gray-600 mb-4">Sistema automatizado que processa matrículas e rematrículas, reduzindo tempo de espera em 70%.</p>
+                        <div class="flex items-center text-sm text-primary">
+                            <i class="fas fa-stopwatch mr-2"></i>
+                            <span>-70% tempo de espera</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Case 3 -->
+                    <div class="case-card rounded-xl p-6 hover-scale">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <i class="fas fa-tasks text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Automação Administrativa</h3>
+                        <p class="text-gray-600 mb-4">Fluxos automatizados para processos burocráticos, liberando 20 horas semanais da equipe.</p>
+                        <div class="flex items-center text-sm text-primary">
+                            <i class="fas fa-hourglass-start mr-2"></i>
+                            <span>20h semanais economizadas</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Saúde & Bem-estar -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
-            <div class="p-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">Saúde & Bem-estar</h2>
-                <p class="text-gray-600 mb-6">Agendamento inteligente, lembretes de medicamentos e triagem inicial</p>
-                
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">Agendamento Inteligente</h3>
-                        <p class="text-gray-600">Sistema que prioriza consultas por urgência e otimiza a agenda médica, reduzindo o tempo ocioso em 30%.</p>
-                    </div>
-                    
-                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">Lembretes de Medicamentos</h3>
-                        <p class="text-gray-600">Alertas personalizados via WhatsApp e SMS para horários de medicação, melhorando a adesão ao tratamento em 50%.</p>
-                    </div>
-                    
-                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">Triagem Inicial</h3>
-                        <p class="text-gray-600">Questionário inteligente que direciona pacientes para os especialistas adequados, agilizando o atendimento em 40%.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- CTA Section -->
+    <section id="cta" class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 font-heading">Pronto para transformar seu negócio?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Nossos agentes de IA estão prontos para automatizar seus processos e impulsionar seus resultados.</p>
+            <a href="#cta" class="inline-block bg-white text-primary px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition shadow-lg hover-scale">
+                Solicitar uma POC
+            </a>
         </div>
+    </section>
 
-        <!-- Serviços Financeiros -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
-            <div class="p-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">Serviços Financeiros</h2>
-                <p class="text-gray-600 mb-6">Processamento de documentos, análise de crédito e atendimento regulatório</p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Coluna 1 -->
+                <div>
+                    <div class="mb-6">
+                        <span class="text-2xl font-bold gradient-text font-heading">IAgentics</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Automação inteligente para pequenas e médias empresas.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
                 
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">Processamento de Documentos</h3>
-                        <p class="text-gray-600">Reconhecimento e validação automática de documentos financeiros, reduzindo o tempo de análise em 75%.</p>
-                    </div>
-                    
-                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">Análise de Crédito</h3>
-                        <p class="text-gray-600">Avaliação automatizada de risco de crédito com machine learning, aumentando a precisão em 30%.</p>
-                    </div>
-                    
-                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">Atendimento Regulatório</h3>
-                        <p class="text-gray-600">Chatbot especializado em normas financeiras que auxilia clientes e colaboradores, reduzindo erros em 65%.</p>
-                    </div>
+                <!-- Coluna 2 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Soluções</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Atendimento Automatizado</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Processamento de Documentos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Agendamento Inteligente</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Automação Financeira</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Coluna 3 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Empresa</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Sobre Nós</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Carreiras</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Coluna 4 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Recursos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Central de Ajuda</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Documentação</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Status do Serviço</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Atualizações</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0 text-gray-400">
+                    &copy; 2025 IAgentics. Todos os direitos reservados.
+                </div>
+                <div class="text-gray-400">
+                    <span>Desenvolvido com <i class="fas fa-heart text-primary"></i> no Brasil</span>
                 </div>
             </div>
         </div>
+    </footer>
 
-        <!-- Educação -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden">
-            <div class="p-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">Educação</h2>
-                <p class="text-gray-600 mb-6">Suporte ao aluno, gestão de matrículas e automação administrativa</p>
-                
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                            <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">Suporte ao Aluno</h3>
-                        <p class="text-gray-600">Assistente virtual que responde 80% das dúvidas acadêmicas 24/7, liberando tempo dos professores.</p>
-                    </div>
-                    
-                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                            <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">Gestão de Matrículas</h3>
-                        <p class="text-gray-600">Sistema automatizado que processa matrículas e rematrículas, reduzindo tempo de espera em 70%.</p>
-                    </div>
-                    
-                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                            <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">Automação Administrativa</h3>
-                        <p class="text-gray-600">Fluxos automatizados para processos burocráticos, liberando 20 horas semanais da equipe.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- WhatsApp Float -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/5511999999999" target="_blank" class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-green-600 transition">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
     </div>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
