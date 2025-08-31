@@ -15,7 +15,7 @@
     <link rel="manifest" href="/site.webmanifest">
     
     <!-- Fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
@@ -230,6 +230,212 @@
             0%, 60%, 100% { transform: translateY(0); }
             30% { transform: translateY(-5px); }
         }
+        
+        /* Estilos específicos para o chatbot em loop */
+        .chatbot-loop-container {
+            background: white;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(118, 7, 232, 0.1);
+            height: 400px;
+        }
+        
+        .chatbot-messages {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            overflow-y: auto;
+            flex: 1;
+            padding: 1rem;
+        }
+        
+        .chatbot-message {
+            max-width: 80%;
+            padding: 10px 14px;
+            border-radius: 1rem;
+            animation: messageFadeIn 0.3s ease-out;
+            position: relative;
+        }
+        
+        .chatbot-message.ai {
+            align-self: flex-start;
+            background: white;
+            color: #4e027c;
+            border-bottom-left-radius: 0.25rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .chatbot-message.user {
+            align-self: flex-end;
+            background: linear-gradient(90deg, #7607e8 0%, #6c66f3 100%);
+            color: white;
+            border-bottom-right-radius: 0.25rem;
+        }
+        
+        .message-time {
+            font-size: 10px;
+            opacity: 0.7;
+            margin-top: 4px;
+            text-align: right;
+        }
+        
+        .quick-reply {
+            display: inline-block;
+            background: rgba(118, 7, 232, 0.1);
+            border-radius: 16px;
+            padding: 6px 12px;
+            margin: 4px;
+            font-size: 12px;
+            color: #7607e8;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .quick-reply:hover {
+            background: rgba(118, 7, 232, 0.2);
+        }
+        
+        /* Estilos específicos para o chatbot financeiro */
+        .finance-chatbot-container {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(118, 7, 232, 0.1);
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .finance-message {
+            max-width: 85%;
+            padding: 10px 14px;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            animation: messageFadeIn 0.4s ease-out;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .finance-message.system {
+            align-self: center;
+            background: #f0f0f0;
+            color: #555;
+            font-style: italic;
+            font-size: 13px;
+            text-align: center;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+        
+        .finance-message.ai {
+            align-self: flex-start;
+            background: white;
+            color: #4e027c;
+            border-bottom-left-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+        
+        .finance-message.user {
+            align-self: flex-end;
+            background: linear-gradient(135deg, #7607e8 0%, #6c66f3 100%);
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+        
+        .finance-message-time {
+            font-size: 10px;
+            opacity: 0.7;
+            margin-top: 4px;
+            text-align: right;
+        }
+        
+        .finance-action-btn {
+            flex-shrink: 0;
+            background: rgba(118, 7, 232, 0.08);
+            border: 1px solid rgba(118, 7, 232, 0.15);
+            color: #7607e8;
+            border-radius: 20px;
+            padding: 6px 12px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        
+        .finance-action-btn:hover {
+            background: rgba(118, 7, 232, 0.15);
+        }
+        
+        .finance-status {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+        
+        .status-success {
+            background: #10b981;
+        }
+        
+        .status-warning {
+            background: #f59e0b;
+        }
+        
+        .status-error {
+            background: #ef4444;
+        }
+        
+        .document-item {
+            padding: 8px 12px;
+            background: #f8fafc;
+            border-radius: 6px;
+            margin: 6px 0;
+            border-left: 3px solid #e2e8f0;
+        }
+        
+        .document-item.processed {
+            border-left-color: #10b981;
+        }
+        
+        .document-item.discrepancy {
+            border-left-color: #f59e0b;
+        }
+        
+        @keyframes messageFadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Efeito de máquina de escrever */
+        .typing-cursor::after {
+            content: "|";
+            animation: blinkCursor 1s infinite;
+        }
+        
+        @keyframes blinkCursor {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        /* Melhorias para mobile */
+        @media (max-width: 768px) {
+            .finance-chatbot-container,
+            .chatbot-loop-container {
+                height: 350px;
+            }
+            
+            .finance-message,
+            .chatbot-message {
+                max-width: 90%;
+                font-size: 13px;
+            }
+            
+            .finance-action-btn {
+                font-size: 11px;
+                padding: 5px 10px;
+            }
+        }
     </style>
 </head>
 <body class="font-sans text-dark bg-light">
@@ -239,12 +445,13 @@
     </div>
 
     <!-- Header -->
-    <header class="sticky top-0 z-50 bg-purple/90 backdrop-blur-md shadow-md transition-all duration-300">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md transition-all duration-300">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between py-4">
+
                 <div class="logo">
                     <a href="index.html" class="flex items-center">
-                        <img src="logo.png" alt="logoIAgentics" style="margin-top: -50%; margin-bottom: -52%; width: 35%;height: 50%;" >
+                        <img src="logo.png" alt="logoIAgentics" style="margin-top: -50%; margin-bottom: -52%; width: 50%;height: 50%;" >
                     </a>
                 </div>
                 
@@ -253,11 +460,10 @@
                     <a href="#how-it-works" class="font-medium hover:text-primary transition">Como Funciona</a>
                     <a href="casos.html" class="font-medium hover:text-primary transition">Casos</a>
                     <a href="marketplace.html" class="font-medium hover:text-primary transition">Preços</a>
-                
                 </nav>
                 
                 <div class="hidden md:flex items-center space-x-4">
-                    
+                    <a href="login.html" class="font-medium hover:text-primary transition">Entrar</a>
                     <a href="#cta" class="gradient-bg text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition shadow-lg hover:shadow-primary/30">Comece Agora</a>
                 </div>
                 
@@ -298,8 +504,8 @@
                     </p>
                     
                     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
-                        <a href="contato.html" class="gradient-bg text-white px-8 py-3 rounded-lg font-medium text-center hover:opacity-90 transition shadow-lg hover:shadow-primary/30 animate__animated animate__pulse animate__infinite animate__slower">
-                           Solicitar uma Demonstração  
+                        <a href="#cta" class="gradient-bg text-white px-8 py-3 rounded-lg font-medium text-center hover:opacity-90 transition shadow-lg hover:shadow-primary/30 animate__animated animate__pulse animate__infinite animate__slower">
+                            Solicitar uma Demonstração  
                         </a>
                         <a href="#demo" class="flex items-center justify-center text-primary font-medium hover:text-secondary transition">
                             <span class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-3 hover:bg-opacity-20 transition">
@@ -321,274 +527,40 @@
                     </div>
                 </div>
                 
-             <div class="lg:w-1/2 relative animate__animated animate__fadeIn">
-    <!-- Chatbot Interativo com Loop -->
-    <div class="chatbot-loop-container gradient-border p-1 h-96">
-        <div class="chatbot-header bg-white p-4 border-b border-gray-200 flex justify-between items-center">
-            <div class="flex items-center">
-                <div class="w-8 h-8 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary mr-3">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <div>
-                    <h3 class="font-bold text-gray-800">Assistente IAgentics</h3>
-                    <p class="text-xs text-gray-500">Online agora</p>
+                <div class="lg:w-1/2 relative animate__animated animate__fadeIn">
+                    <!-- Chatbot Interativo com Loop -->
+                    <div class="chatbot-loop-container gradient-border">
+                        <div class="chatbot-header bg-white p-4 border-b border-gray-200 flex justify-between items-center">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary mr-3">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800">Assistente IAgentics</h3>
+                                    <p class="text-xs text-gray-500">Online agora</p>
+                                </div>
+                            </div>
+                            <div class="flex space-x-1">
+                                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                                <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse" style="animation-delay: 0.2s"></span>
+                                <span class="w-2 h-2 rounded-full bg-red-400 animate-pulse" style="animation-delay: 0.4s"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="chatbot-messages">
+                            <!-- Mensagens serão adicionadas dinamicamente via JavaScript -->
+                        </div>
+                        
+                        <div class="chatbot-input bg-white p-3 border-t border-gray-200 flex items-center">
+                            <input type="text" placeholder="Digite sua mensagem..." class="flex-1 border-0 focus:ring-0 focus:outline-none text-sm" disabled>
+                            <button class="text-gray-400 ml-2">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="flex space-x-1">
-                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse" style="animation-delay: 0.2s"></span>
-                <span class="w-2 h-2 rounded-full bg-red-400 animate-pulse" style="animation-delay: 0.4s"></span>
-            </div>
         </div>
-        
-        <div class="chatbot-messages bg-gray-50 flex-1 overflow-y-auto p-4">
-            <!-- Mensagens serão adicionadas dinamicamente via JavaScript -->
-        </div>
-        
-        <div class="chatbot-input bg-white p-3 border-t border-gray-200 flex items-center">
-            <input type="text" placeholder="Digite sua mensagem..." class="flex-1 border-0 focus:ring-0 focus:outline-none text-sm" disabled>
-            <button class="text-gray-400 ml-2">
-                <i class="fas fa-paper-plane"></i>
-            </button>
-        </div>
-    </div>
-</div>
-
-<style>
-    /* Estilos específicos para o chatbot em loop */
-    .chatbot-loop-container {
-        background: white;
-        border-radius: 1rem;
-        display: flex;
-        flex-direction: column;
-        box-shadow: 0 10px 30px rgba(118, 7, 232, 0.1);
-    }
-    
-    .chatbot-messages {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-    
-    .chatbot-message {
-        max-width: 80%;
-        padding: 10px 14px;
-        border-radius: 1rem;
-        animation: messageFadeIn 0.3s ease-out;
-        position: relative;
-    }
-    
-    .chatbot-message.ai {
-        align-self: flex-start;
-        background: white;
-        color: #4e027c;
-        border-bottom-left-radius: 0.25rem;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    
-    .chatbot-message.user {
-        align-self: flex-end;
-        background: linear-gradient(90deg, #7607e8 0%, #6c66f3 100%);
-        color: white;
-        border-bottom-right-radius: 0.25rem;
-    }
-    
-    .message-time {
-        font-size: 10px;
-        opacity: 0.7;
-        margin-top: 4px;
-        text-align: right;
-    }
-    
-    .typing-indicator {
-        display: flex;
-        align-items: center;
-        padding: 8px 12px;
-        background: white;
-        border-radius: 18px;
-        width: fit-content;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        margin-bottom: 12px;
-    }
-    
-    .typing-dot {
-        width: 6px;
-        height: 6px;
-        background: #666;
-        border-radius: 50%;
-        margin: 0 2px;
-        animation: typingAnimation 1.4s infinite ease-in-out;
-    }
-    
-    @keyframes typingAnimation {
-        0%, 60%, 100% { transform: translateY(0); }
-        30% { transform: translateY(-3px); }
-    }
-    
-    @keyframes messageFadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .quick-reply {
-        display: inline-block;
-        background: rgba(118, 7, 232, 0.1);
-        border-radius: 16px;
-        padding: 6px 12px;
-        margin: 4px;
-        font-size: 12px;
-        color: #7607e8;
-        cursor: pointer;
-        transition: all 0.2s;
-    }
-    
-    .quick-reply:hover {
-        background: rgba(118, 7, 232, 0.2);
-    }
-</style>
-
-<script>
-    // Simulação de conversa em loop
-    document.addEventListener('DOMContentLoaded', function() {
-        const messagesContainer = document.querySelector('.chatbot-messages');
-        
-        // Conversa pré-definida em loop
-        const conversation = [
-            {
-                sender: 'ai',
-                text: 'Olá! 👋 Sou o assistente virtual da IAgentics. Como posso te ajudar hoje?',
-                delay: 1000
-            },
-            {
-                sender: 'ai',
-                text: 'Você pode me perguntar sobre nossos serviços, preços ou como começar a usar.',
-                delay: 2000
-            },
-            {
-                sender: 'user',
-                text: 'Quais serviços vocês oferecem?',
-                delay: 3000
-            },
-            {
-                sender: 'ai',
-                text: 'Oferecemos agentes de IA especializados em:<br><br>' +
-                      '• Atendimento ao cliente 24/7<br>' +
-                      '• Processamento inteligente de documentos<br>' +
-                      '• Automação de processos financeiros<br>' +
-                      '• Agendamento e acompanhamento<br><br>' +
-                      '<span class="quick-reply">Quero saber sobre atendimento</span>' +
-                      '<span class="quick-reply">Como funciona o processamento?</span>',
-                delay: 2000
-            },
-            {
-                sender: 'user',
-                text: 'Quanto custa para começar?',
-                delay: 3000
-            },
-            {
-                sender: 'ai',
-                text: 'Temos planos a partir de R$497/mês com:<br><br>' +
-                      '• POC para testar<br>' +
-                      '• Configuração personalizada<br>' +
-                      '• Suporte dedicado<br><br>' +
-                      '<a href="#cta"><button class="gradient-bg text-white text-sm px-4 py-2 rounded-lg hover:opacity-90 transition">Agendar Demonstração</button></a>',
-                delay: 2000
-            },
-            {
-                sender: 'user',
-                text: 'Como faço para testar?',
-                delay: 5000
-            },
-            {
-                sender: 'ai',
-                text: 'É simples! Basta clicar em <a href="#cta"><button class="gradient-bg text-white text-sm px-4 py-2 rounded-lg hover:opacity-90 transition">Agendar Demonstração</button></a> e preencher o formulário. ' +
-                      'Nossa equipe entrará em contato em até 1 hora útil para configurar seu agente personalizado.',
-                delay: 4000
-            }
-        ];
-        
-        // Função para adicionar mensagem
-        function addMessage(sender, text) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `chatbot-message ${sender}`;
-            
-            const now = new Date();
-            const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-            
-            messageDiv.innerHTML = `
-                <div>${text}</div>
-                <div class="message-time">${timeString}</div>
-            `;
-            
-            messagesContainer.appendChild(messageDiv);
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-        }
-        
-        // Função para mostrar indicador de digitando
-        function showTyping() {
-            const typingDiv = document.createElement('div');
-            typingDiv.className = 'typing-indicator';
-            typingDiv.innerHTML = `
-                <div class="typing-dot"></div>
-                <div class="typing-dot"></div>
-                <div class="typing-dot"></div>
-                <span style="margin-left: 8px; font-size: 12px;">Digitando...</span>
-            `;
-            
-            messagesContainer.appendChild(typingDiv);
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-            return typingDiv;
-        }
-        
-        // Função para executar a conversa em loop
-        function runConversation() {
-            let index = 0;
-            
-            function nextMessage() {
-                if (index >= conversation.length) {
-                    index = 0; // Reinicia a conversa
-                    // Limpa o chat antes de reiniciar
-                    setTimeout(() => {
-                        messagesContainer.innerHTML = '';
-                        nextMessage();
-                    }, 3000);
-                    return;
-                }
-                
-                const message = conversation[index];
-                
-                // Mostra indicador de digitando para mensagens do bot
-                if (message.sender === 'ai') {
-                    const typing = showTyping();
-                    setTimeout(() => {
-                        typing.remove();
-                        addMessage(message.sender, message.text);
-                        index++;
-                        setTimeout(nextMessage, conversation[index]?.delay || 1000);
-                    }, 1500);
-                } else {
-                    addMessage(message.sender, message.text);
-                    index++;
-                    setTimeout(nextMessage, message.delay);
-                }
-            }
-            
-            // Inicia a conversa
-            setTimeout(nextMessage, 1000);
-        }
-        
-        // Inicia o loop da conversa
-        runConversation();
-        
-        // Configura reinício automático
-        setInterval(() => {
-            if (messagesContainer.children.length > 15) {
-                messagesContainer.innerHTML = '';
-                runConversation();
-            }
-        }, 30000);
-    });
-</script>             
     </section>
 
     <!-- Soluções -->
@@ -623,7 +595,7 @@
                                 <span class="text-gray-600">Escala questões complexas</span>
                             </li>
                         </ul>
-                        <a href="marketplace.html" class="inline-flex items-center text-primary font-medium group">
+                        <a href="#pricing" class="inline-flex items-center text-primary font-medium group">
                             Saiba mais <i class="fas fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
                         </a>
                     </div>
@@ -652,8 +624,8 @@
                                 <span class="text-gray-600">Precisão de 99.7%</span>
                             </li>
                         </ul>
-                        <a href="marketplace.html" class="inline-flex items-center text-primary font-medium group">
-                            Saiba mais <i class="fas fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
+                        <a href="#demo" class="inline-flex items-center text-primary font-medium group">
+                            Ver Demo <i class="fas fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
                         </a>
                     </div>
                 </div>
@@ -680,7 +652,7 @@
                                 <span class="text-gray-600">Reagendamento automático</span>
                             </li>
                         </ul>
-                        <a href="marketplace.html" class="inline-flex items-center text-primary font-medium group">
+                        <a href="#pricing" class="inline-flex items-center text-primary font-medium group">
                             Saiba mais <i class="fas fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
                         </a>
                     </div>
@@ -736,452 +708,93 @@
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2 mb-12 lg:mb-0">
                     <span class="inline-block px-3 py-1 text-sm font-medium text-primary bg-primary bg-opacity-10 rounded-full mb-4">Demonstração</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 font-heading">Veja Nosso Agente em Ação</h2>
-                    <p class="text-lg text-gray-600 mb-8">Nosso assistente virtual pode lidar com múltiplas tarefas simultaneamente, aprendendo com cada interação para melhorar continuamente.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 font-heading">Veja Nosso Agente Financeiro em Ação</h2>
+                    <p class="text-lg text-gray-600 mb-8">Nosso agente especializado em finanças automatiza processos contábeis, detecta discrepâncias e gera relatórios detalhados em tempo real.</p>
                     
                     <div class="space-y-6">
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mr-4 mt-1">
                                 <div class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary">
-                                    <i class="fas fa-bolt"></i>
+                                    <i class="fas fa-file-invoice"></i>
                                 </div>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold mb-2">Respostas Instantâneas</h3>
-                                <p class="text-gray-600">Clientes não precisam esperar por respostas, mesmo fora do horário comercial.</p>
+                                <h3 class="text-xl font-bold mb-2">Processamento de Documentos</h3>
+                                <p class="text-gray-600">Extrai automaticamente dados de notas fiscais, faturas e recibos com alta precisão.</p>
                             </div>
                         </div>
                         
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mr-4 mt-1">
                                 <div class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary">
-                                    <i class="fas fa-brain"></i>
+                                    <i class="fas fa-chart-line"></i>
                                 </div>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold mb-2">Aprendizado Contínuo</h3>
-                                <p class="text-gray-600">Melhora com o tempo, entendendo melhor suas necessidades específicas.</p>
+                                <h3 class="text-xl font-bold mb-2">Análise Inteligente</h3>
+                                <p class="text-gray-600">Identifica padrões, discrepâncias e oportunidades de economia automaticamente.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mr-4 mt-1">
+                                <div class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Relatórios Automatizados</h3>
+                                <p class="text-gray-600">Gera relatórios financeiros detalhados e os envia para as partes interessadas.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-               <div class="lg:w-1/2">
-    <!-- Chatbot Financeiro Avançado -->
-    <div class="finance-chatbot-container gradient-border p-1 h-96 flex flex-col">
-        <!-- Cabeçalho com status -->
-        <div class="p-4 border-b border-gray-200 bg-white flex justify-between items-center">
-            <div>
-                <h3 class="font-bold text-primary">Agente Financeiro IAgentics</h3>
-                <p class="text-xs text-gray-500 flex items-center">
-                    <span class="w-2 h-2 rounded-full bg-green-500 mr-1 animate-pulse"></span>
-                    Processando documentos em tempo real
-                </p>
-            </div>
-            <div class="flex space-x-1">
-                <span class="w-2 h-2 rounded-full bg-gray-400"></span>
-                <span class="w-2 h-2 rounded-full bg-gray-400"></span>
-                <span class="w-2 h-2 rounded-full bg-gray-400"></span>
+                <div class="lg:w-1/2">
+                    <!-- Chatbot Financeiro Avançado -->
+                    <div class="finance-chatbot-container gradient-border">
+                        <!-- Cabeçalho com status -->
+                        <div class="p-4 border-b border-gray-200 bg-white flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-primary">Agente Financeiro IAgentics</h3>
+                                <p class="text-xs text-gray-500 flex items-center">
+                                    <span class="w-2 h-2 rounded-full bg-green-500 mr-1 animate-pulse"></span>
+                                    Processando documentos em tempo real
+                                </p>
+                            </div>
+                            <div class="flex space-x-1">
+                                <span class="w-2 h-2 rounded-full bg-gray-400"></span>
+                                <span class="w-2 h-2 rounded-full bg-gray-400"></span>
+                                <span class="w-2 h-2 rounded-full bg-gray-400"></span>
+                            </div>
+                        </div>
+                        
+                        <!-- Corpo do Chat -->
+                        <div id="finance-chat-messages" class="flex-1 overflow-y-auto p-4 bg-gray-50">
+                            <!-- Mensagens serão injetadas via JavaScript -->
+                        </div>
+                        
+                        <!-- Rodapé com ações -->
+                        <div class="p-3 border-t border-gray-200 bg-white">
+                            <div class="flex items-center space-x-2 overflow-x-auto pb-1">
+                                <button class="finance-action-btn" data-action="upload">
+                                    <i class="fas fa-file-upload mr-1"></i> Enviar NF
+                                </button>
+                                <button class="finance-action-btn" data-action="report">
+                                    <i class="fas fa-file-alt mr-1"></i> Relatório
+                                </button>
+                                <button class="finance-action-btn" data-action="discrepancies">
+                                    <i class="fas fa-exclamation-triangle mr-1"></i> Divergências
+                                </button>
+                                <button class="finance-action-btn" data-action="help">
+                                    <i class="fas fa-question-circle mr-1"></i> Ajuda
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <!-- Corpo do Chat -->
-        <div id="finance-chat-messages" class="flex-1 overflow-y-auto p-4 bg-gray-50">
-            <!-- Mensagens serão injetadas via JavaScript -->
-        </div>
-        
-        <!-- Rodapé com ações -->
-        <div class="p-3 border-t border-gray-200 bg-white">
-            <div class="flex items-center space-x-2 overflow-x-auto pb-1">
-                <button class="finance-action-btn" data-action="upload">
-                    <i class="fas fa-file-upload mr-1"></i> Enviar NF
-                </button>
-                <button class="finance-action-btn" data-action="report">
-                    <i class="fas fa-file-alt mr-1"></i> Gerar Relatório
-                </button>
-                <button class="finance-action-btn" data-action="discrepancies">
-                    <i class="fas fa-exclamation-triangle mr-1"></i> Ver Divergências
-                </button>
-                <button class="finance-action-btn" data-action="help">
-                    <i class="fas fa-question-circle mr-1"></i> Ajuda
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-    /* Estilos específicos para o chatbot financeiro */
-    .finance-chatbot-container {
-        background: white;
-        border-radius: 1rem;
-        box-shadow: 0 10px 30px rgba(118, 7, 232, 0.1);
-    }
-    
-    .finance-message {
-        max-width: 85%;
-        padding: 10px 14px;
-        margin-bottom: 12px;
-        border-radius: 12px;
-        animation: messageFadeIn 0.4s ease-out;
-        font-size: 14px;
-        line-height: 1.5;
-    }
-    
-    .finance-message.system {
-        align-self: center;
-        background: #f0f0f0;
-        color: #555;
-        font-style: italic;
-        font-size: 13px;
-        text-align: center;
-        padding: 8px 12px;
-        border-radius: 8px;
-    }
-    
-    .finance-message.ai {
-        align-self: flex-start;
-        background: white;
-        color: #4e027c;
-        border-bottom-left-radius: 4px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
-    
-    .finance-message.user {
-        align-self: flex-end;
-        background: linear-gradient(135deg, #7607e8 0%, #6c66f3 100%);
-        color: white;
-        border-bottom-right-radius: 4px;
-    }
-    
-    .finance-message-time {
-        font-size: 10px;
-        opacity: 0.7;
-        margin-top: 4px;
-        text-align: right;
-    }
-    
-    .finance-action-btn {
-        flex-shrink: 0;
-        background: rgba(118, 7, 232, 0.08);
-        border: 1px solid rgba(118, 7, 232, 0.15);
-        color: #7607e8;
-        border-radius: 20px;
-        padding: 6px 12px;
-        font-size: 12px;
-        cursor: pointer;
-        transition: all 0.2s;
-        white-space: nowrap;
-    }
-    
-    .finance-action-btn:hover {
-        background: rgba(118, 7, 232, 0.15);
-    }
-    
-    .finance-status {
-        display: inline-block;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        margin-right: 6px;
-    }
-    
-    .status-success {
-        background: #10b981;
-    }
-    
-    .status-warning {
-        background: #f59e0b;
-    }
-    
-    .status-error {
-        background: #ef4444;
-    }
-    
-    .document-item {
-        padding: 8px 12px;
-        background: #f8fafc;
-        border-radius: 6px;
-        margin: 6px 0;
-        border-left: 3px solid #e2e8f0;
-    }
-    
-    .document-item.processed {
-        border-left-color: #10b981;
-    }
-    
-    .document-item.discrepancy {
-        border-left-color: #f59e0b;
-    }
-    
-    @keyframes messageFadeIn {
-        from { opacity: 0; transform: translateY(8px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    
-    /* Efeito de máquina de escrever */
-    .typing-cursor::after {
-        content: "|";
-        animation: blinkCursor 1s infinite;
-    }
-    
-    @keyframes blinkCursor {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-    }
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const chatContainer = document.getElementById('finance-chat-messages');
-    let conversationStep = 0;
-    
-    // Conversa pré-definida em loop
-    const conversationFlow = [
-        {
-            type: 'system',
-            text: 'Sistema conectado - Última atualização: ' + new Date().toLocaleTimeString(),
-            delay: 500
-        },
-        {
-            type: 'ai',
-            text: '[Processamento Automático] Analisei 15 documentos hoje. 3 requerem atenção especial.',
-            delay: 1500
-        },
-        {
-            type: 'user',
-            text: 'Mostre o resumo detalhado',
-            delay: 3000
-        },
-        {
-            type: 'ai',
-            html: `
-                <div class="mb-2"><strong>Resumo do Processamento (15/15):</strong></div>
-                <div class="document-item processed">
-                    <span class="finance-status status-success"></span>
-                    12 notas fiscais processadas com sucesso
-                </div>
-                <div class="document-item discrepancy">
-                    <span class="finance-status status-warning"></span>
-                    2 notas com divergência de valores
-                </div>
-                <div class="document-item discrepancy">
-                    <span class="finance-status status-error"></span>
-                    1 nota com data de vencimento expirada
-                </div>
-                <div class="mt-3">
-                    💰 <strong>Total processado:</strong> R$ 68.420,50
-                </div>
-            `,
-            delay: 3500
-        },
-        {
-            type: 'user',
-            text: 'Quais são as divergências?',
-            delay: 6000
-        },
-        {
-            type: 'ai',
-            html: `
-                <div class="mb-2"><strong>Detalhes das Divergências:</strong></div>
-                <div class="document-item discrepancy">
-                    <strong>NF 2456</strong> - Valor R$ 1.250,00 (Diferença de R$ 150,00)<br>
-                    <small>Fornecedor: ABC Materiais Ltda.</small>
-                </div>
-                <div class="document-item discrepancy">
-                    <strong>NF 3789</strong> - Valor R$ 3.780,00 (Diferença de R$ 420,00)<br>
-                    <small>Fornecedor: XYZ Componentes S.A.</small>
-                </div>
-                <div class="document-item discrepancy">
-                    <strong>NF 4123</strong> - Vencimento em 15/05/2023 (expirado)<br>
-                    <small>Fornecedor: Sistemas Integrados</small>
-                </div>
-                <div class="mt-3 text-sm">
-                    <i class="fas fa-info-circle mr-1"></i> Alertas já enviados para os responsáveis
-                </div>
-            `,
-            delay: 4000
-        },
-        {
-            type: 'user',
-            text: 'Gerar relatório para o financeiro',
-            delay: 7000
-        },
-        {
-            type: 'ai',
-            html: `
-                <div>
-                    <i class="fas fa-file-pdf mr-1"></i> <strong>Relatório Financeiro Diário</strong> gerado com sucesso!
-                </div>
-                <div class="mt-2">
-                    📤 Enviado para: financeiro@empresa.com<br>
-                    📅 Período: ${new Date().toLocaleDateString()}<br>
-                    ⏱️ Horário: ${new Date().toLocaleTimeString()}
-                </div>
-                <div class="mt-3">
-                    <button class="finance-action-btn mt-2" data-action="download">
-                        <i class="fas fa-download mr-1"></i> Baixar Cópia
-                    </button>
-                </div>
-            `,
-            delay: 3000
-        },
-        {
-            type: 'system',
-            text: 'Novos documentos detectados para processamento...',
-            delay: 5000
-        }
-    ];
-    
-    // Função para adicionar mensagem
-    function addMessage(type, content, isHTML = false) {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `finance-message ${type}`;
-        
-        const now = new Date();
-        const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        
-        if (isHTML) {
-            messageDiv.innerHTML = `
-                ${content}
-                <div class="finance-message-time">${timeString}</div>
-            `;
-        } else {
-            messageDiv.innerHTML = `
-                <div>${content}</div>
-                <div class="finance-message-time">${timeString}</div>
-            `;
-        }
-        
-        chatContainer.appendChild(messageDiv);
-        chatContainer.scrollTop = chatContainer.scrollHeight;
-    }
-    
-    // Função para mostrar "digitando..."
-    function showTyping() {
-        const typingDiv = document.createElement('div');
-        typingDiv.className = 'finance-message ai';
-        typingDiv.id = 'typing-indicator';
-        typingDiv.innerHTML = `
-            <div class="flex items-center">
-                <div class="typing-dot"></div>
-                <div class="typing-dot" style="animation-delay: 0.2s"></div>
-                <div class="typing-dot" style="animation-delay: 0.4s"></div>
-            </div>
-        `;
-        
-        chatContainer.appendChild(typingDiv);
-        chatContainer.scrollTop = chatContainer.scrollHeight;
-    }
-    
-    // Função para remover "digitando..."
-    function removeTyping() {
-        const typing = document.getElementById('typing-indicator');
-        if (typing) typing.remove();
-    }
-    
-    // Função principal que controla o fluxo da conversa
-    function runConversation() {
-        if (conversationStep >= conversationFlow.length) {
-            conversationStep = 0;
-            // Limpa o chat antes de reiniciar (opcional)
-            setTimeout(() => {
-                chatContainer.innerHTML = '';
-                runConversation();
-            }, 3000);
-            return;
-        }
-        
-        const message = conversationFlow[conversationStep];
-        
-        // Para mensagens do sistema, mostra direto
-        if (message.type === 'system') {
-            addMessage('system', message.text);
-            conversationStep++;
-            setTimeout(runConversation, message.delay);
-        } 
-        // Para mensagens do AI, mostra "digitando..." primeiro
-        else if (message.type === 'ai') {
-            showTyping();
-            setTimeout(() => {
-                removeTyping();
-                addMessage('ai', message.html || message.text, !!message.html);
-                conversationStep++;
-                setTimeout(runConversation, conversationFlow[conversationStep]?.delay || 1000);
-            }, 1800);
-        } 
-        // Para mensagens do usuário
-        else {
-            addMessage('user', message.text);
-            conversationStep++;
-            setTimeout(runConversation, message.delay);
-        }
-    }
-    
-    // Inicia a conversa
-    setTimeout(runConversation, 1000);
-    
-    // Botões de ação
-    document.querySelectorAll('.finance-action-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const action = this.getAttribute('data-action');
-            let message = '';
-            
-            switch(action) {
-                case 'upload':
-                    message = 'Enviar novas notas fiscais';
-                    break;
-                case 'report':
-                    message = 'Gerar relatório completo';
-                    break;
-                case 'discrepancies':
-                    message = 'Mostrar todas as divergências';
-                    break;
-                case 'help':
-                    message = 'Preciso de ajuda com o sistema';
-                    break;
-                case 'download':
-                    message = 'Baixar relatório em PDF';
-                    break;
-                default:
-                    message = 'Ação solicitada: ' + action;
-            }
-            
-            addMessage('user', message);
-            showTyping();
-            
-            // Resposta automática após 1.5s
-            setTimeout(() => {
-                removeTyping();
-                let response = '';
-                
-                switch(action) {
-                    case 'upload':
-                        response = 'Pronto para receber documentos. Você pode arrastar os arquivos ou <a href="#" class="text-primary underline">selecionar do computador</a>.';
-                        break;
-                    case 'report':
-                        response = 'Relatório completo gerado com sucesso! Contém todas as transações dos últimos 30 dias.';
-                        break;
-                    case 'discrepancies':
-                        response = 'Listando todas as divergências pendentes...';
-                        break;
-                    case 'help':
-                        response = 'Estou conectando você com nosso time de suporte. Enquanto isso, você pode consultar nossa <a href="#" class="text-primary underline">base de conhecimento</a>.';
-                        break;
-                    case 'download':
-                        response = '<i class="fas fa-download mr-1"></i> Iniciando download do relatório...<br><small>Relatorio_Financeiro_' + new Date().toLocaleDateString() + '.pdf</small>';
-                        break;
-                    default:
-                        response = 'Ação "' + action + '" reconhecida. Processando...';
-                }
-                
-                addMessage('ai', response, true);
-                chatContainer.scrollTop = chatContainer.scrollHeight;
-            }, 1500);
-        });
-    });
-});
-</script>
     </section>
 
     <!-- CTA Section -->
@@ -1195,8 +808,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <a href="#cta-form" class="bg-white text-primary px-8 py-3 rounded-lg font-medium text-center hover:bg-opacity-90 transition shadow-lg">
                         Teste Grátis Agora
                     </a>
-                    <a href="#" class="bg-white bg-opacity-10 px-8 py-3 rounded-lg font-medium text-center hover:bg-opacity-20 transition border border-white border-opacity-30">
-                        Fale com Especialista
+                    <a href="#demo" class="bg-white bg-opacity-10 px-8 py-3 rounded-lg font-medium text-center hover:bg-opacity-20 transition border border-white border-opacity-30">
+                        Ver Demonstração
                     </a>
                 </div>
             </div>
@@ -1212,7 +825,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p class="text-gray-600">Preencha o formulário e nosso time entrará em contato para configurar seu agente</p>
                 </div>
                 
-                <form id="lead-form">
+                <form id="lead-form" netlify>
                     <div class="grid md:grid-cols-2 gap-6 mb-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
@@ -1276,10 +889,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div>
                     <h3 class="text-lg font-bold mb-4">Soluções</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Atendimento Automatizado</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Processamento de Documentos</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Agendamento Inteligente</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Automação Financeira</a></li>
+                        <li><a href="#solutions" class="text-gray-400 hover:text-white transition">Atendimento Automatizado</a></li>
+                        <li><a href="#demo" class="text-gray-400 hover:text-white transition">Processamento de Documentos</a></li>
+                        <li><a href="#solutions" class="text-gray-400 hover:text-white transition">Agendamento Inteligente</a></li>
+                        <li><a href="#demo" class="text-gray-400 hover:text-white transition">Automação Financeira</a></li>
                     </ul>
                 </div>
                 
@@ -1290,7 +903,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Sobre Nós</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Carreiras</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                        <li><a href="#cta-form" class="text-gray-400 hover:text-white transition">Contato</a></li>
                     </ul>
                 </div>
                 
@@ -1352,19 +965,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // FAQ Accordion
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const icon = question.querySelector('i');
-                
-                answer.classList.toggle('hidden');
-                icon.classList.toggle('rotate-180');
-            });
-        });
-        
         // Form Submission
         const leadForm = document.getElementById('lead-form');
         
@@ -1373,23 +973,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // Aqui você pode adicionar o código para enviar o formulário
             alert('Formulário enviado com sucesso! Entraremos em contato em breve.');
             leadForm.reset();
-        });
-        
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
         });
         
         // Chatbot Simulation
@@ -1412,6 +995,405 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('load', () => {
             setTimeout(simulateChatbot, 2000);
             setInterval(simulateChatbot, 10000);
+        });
+        
+        // Simulação de conversa em loop para o primeiro chatbot
+        document.addEventListener('DOMContentLoaded', function() {
+            const messagesContainer = document.querySelector('.chatbot-messages');
+            
+            // Conversa pré-definida em loop
+            const conversation = [
+                {
+                    sender: 'ai',
+                    text: 'Olá! 👋 Sou o assistente virtual da IAgentics. Como posso te ajudar hoje?',
+                    delay: 1000
+                },
+                {
+                    sender: 'ai',
+                    text: 'Você pode me perguntar sobre nossos serviços, preços ou como começar a usar.',
+                    delay: 2000
+                },
+                {
+                    sender: 'user',
+                    text: 'Quais serviços vocês oferecem?',
+                    delay: 3000
+                },
+                {
+                    sender: 'ai',
+                    html: 'Oferecemos agentes de IA especializados em:<br><br>' +
+                          '• Atendimento ao cliente 24/7<br>' +
+                          '• Processamento inteligente de documentos<br>' +
+                          '• Automação de processos financeiros<br>' +
+                          '• Agendamento e acompanhamento<br><br>' +
+                          '<span class="quick-reply">Quero saber sobre atendimento</span>' +
+                          '<span class="quick-reply">Como funciona o processamento?</span>',
+                    delay: 2000
+                },
+                {
+                    sender: 'user',
+                    text: 'Quanto custa para começar?',
+                    delay: 3000
+                },
+                {
+                    sender: 'ai',
+                    html: 'Temos planos a partir de R$497/mês com:<br><br>' +
+                          '• POC para testar<br>' +
+                          '• Configuração personalizada<br>' +
+                          '• Suporte dedicado<br><br>' +
+                          '<a href="#cta"><button class="gradient-bg text-white text-sm px-4 py-2 rounded-lg hover:opacity-90 transition">Agendar Demonstração</button></a>',
+                    delay: 2000
+                },
+                {
+                    sender: 'user',
+                    text: 'Como faço para testar?',
+                    delay: 5000
+                },
+                {
+                    sender: 'ai',
+                    html: 'É simples! Basta clicar em <a href="#cta"><button class="gradient-bg text-white text-sm px-4 py-2 rounded-lg hover:opacity-90 transition">Agendar Demonstração</button></a> e preencher o formulário. ' +
+                          'Nossa equipe entrará em contato em até 1 hora útil para configurar seu agente personalizado.',
+                    delay: 4000
+                }
+            ];
+            
+            // Função para adicionar mensagem
+            function addMessage(sender, text, isHTML = false) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `chatbot-message ${sender}`;
+                
+                const now = new Date();
+                const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                
+                if (isHTML) {
+                    messageDiv.innerHTML = `
+                        <div>${text}</div>
+                        <div class="message-time">${timeString}</div>
+                    `;
+                } else {
+                    messageDiv.innerHTML = `
+                        <div>${text}</div>
+                        <div class="message-time">${timeString}</div>
+                    `;
+                }
+                
+                messagesContainer.appendChild(messageDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+            
+            // Função para mostrar indicador de digitando
+            function showTyping() {
+                const typingDiv = document.createElement('div');
+                typingDiv.className = 'typing-indicator';
+                typingDiv.innerHTML = `
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <span style="margin-left: 8px; font-size: 12px;">Digitando...</span>
+                `;
+                
+                messagesContainer.appendChild(typingDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                return typingDiv;
+            }
+            
+            // Função para executar a conversa em loop
+            function runConversation() {
+                let index = 0;
+                
+                function nextMessage() {
+                    if (index >= conversation.length) {
+                        index = 0; // Reinicia a conversa
+                        // Limpa o chat antes de reiniciar
+                        setTimeout(() => {
+                            messagesContainer.innerHTML = '';
+                            nextMessage();
+                        }, 3000);
+                        return;
+                    }
+                    
+                    const message = conversation[index];
+                    
+                    // Mostra indicador de digitando para mensagens do bot
+                    if (message.sender === 'ai') {
+                        const typing = showTyping();
+                        setTimeout(() => {
+                            typing.remove();
+                            addMessage(message.sender, message.html || message.text, !!message.html);
+                            index++;
+                            setTimeout(nextMessage, conversation[index]?.delay || 1000);
+                        }, 1500);
+                    } else {
+                        addMessage(message.sender, message.text);
+                        index++;
+                        setTimeout(nextMessage, message.delay);
+                    }
+                }
+                
+                // Inicia a conversa
+                setTimeout(nextMessage, 1000);
+            }
+            
+            // Inicia o loop da conversa
+            runConversation();
+            
+            // Configura reinício automático
+            setInterval(() => {
+                if (messagesContainer.children.length > 15) {
+                    messagesContainer.innerHTML = '';
+                    runConversation();
+                }
+            }, 30000);
+        });
+        
+        // Script para o chatbot financeiro
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatContainer = document.getElementById('finance-chat-messages');
+            let conversationStep = 0;
+            
+            // Conversa pré-definida em loop
+            const conversationFlow = [
+                {
+                    type: 'system',
+                    text: 'Sistema conectado - Última atualização: ' + new Date().toLocaleTimeString(),
+                    delay: 500
+                },
+                {
+                    type: 'ai',
+                    text: '[Processamento Automático] Analisei 15 documentos hoje. 3 requerem atenção especial.',
+                    delay: 1500
+                },
+                {
+                    type: 'user',
+                    text: 'Mostre o resumo detalhado',
+                    delay: 3000
+                },
+                {
+                    type: 'ai',
+                    html: `
+                        <div class="mb-2"><strong>Resumo do Processamento (15/15):</strong></div>
+                        <div class="document-item processed">
+                            <span class="finance-status status-success"></span>
+                            12 notas fiscais processadas com sucesso
+                        </div>
+                        <div class="document-item discrepancy">
+                            <span class="finance-status status-warning"></span>
+                            2 notas com divergência de valores
+                        </div>
+                        <div class="document-item discrepancy">
+                            <span class="finance-status status-error"></span>
+                            1 nota com data de vencimento expirada
+                        </div>
+                        <div class="mt-3">
+                            💰 <strong>Total processado:</strong> R$ 68.420,50
+                        </div>
+                    `,
+                    delay: 3500
+                },
+                {
+                    type: 'user',
+                    text: 'Quais são as divergências?',
+                    delay: 6000
+                },
+                {
+                    type: 'ai',
+                    html: `
+                        <div class="mb-2"><strong>Detalhes das Divergências:</strong></div>
+                        <div class="document-item discrepancy">
+                            <strong>NF 2456</strong> - Valor R$ 1.250,00 (Diferença de R$ 150,00)<br>
+                            <small>Fornecedor: ABC Materiais Ltda.</small>
+                        </div>
+                        <div class="document-item discrepancy">
+                            <strong>NF 3789</strong> - Valor R$ 3.780,00 (Diferença de R$ 420,00)<br>
+                            <small>Fornecedor: XYZ Componentes S.A.</small>
+                        </div>
+                        <div class="document-item discrepancy">
+                            <strong>NF 4123</strong> - Vencimento em 15/05/2023 (expirado)<br>
+                            <small>Fornecedor: Sistemas Integrados</small>
+                        </div>
+                        <div class="mt-3 text-sm">
+                            <i class="fas fa-info-circle mr-1"></i> Alertas já enviados para os responsáveis
+                        </div>
+                    `,
+                    delay: 4000
+                },
+                {
+                    type: 'user',
+                    text: 'Gerar relatório para o financeiro',
+                    delay: 7000
+                },
+                {
+                    type: 'ai',
+                    html: `
+                        <div>
+                            <i class="fas fa-file-pdf mr-1"></i> <strong>Relatório Financeiro Diário</strong> gerado com sucesso!
+                        </div>
+                        <div class="mt-2">
+                            📤 Enviado para: financeiro@empresa.com<br>
+                            📅 Período: ${new Date().toLocaleDateString()}<br>
+                            ⏱️ Horário: ${new Date().toLocaleTimeString()}
+                        </div>
+                        <div class="mt-3">
+                            <button class="finance-action-btn mt-2" data-action="download">
+                                <i class="fas fa-download mr-1"></i> Baixar Cópia
+                            </button>
+                        </div>
+                    `,
+                    delay: 3000
+                },
+                {
+                    type: 'system',
+                    text: 'Novos documentos detectados para processamento...',
+                    delay: 5000
+                }
+            ];
+            
+            // Função para adicionar mensagem
+            function addMessage(type, content, isHTML = false) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `finance-message ${type}`;
+                
+                const now = new Date();
+                const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                
+                if (isHTML) {
+                    messageDiv.innerHTML = `
+                        ${content}
+                        <div class="finance-message-time">${timeString}</div>
+                    `;
+                } else {
+                    messageDiv.innerHTML = `
+                        <div>${content}</div>
+                        <div class="finance-message-time">${timeString}</div>
+                    `;
+                }
+                
+                chatContainer.appendChild(messageDiv);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+            
+            // Função para mostrar "digitando..."
+            function showTyping() {
+                const typingDiv = document.createElement('div');
+                typingDiv.className = 'finance-message ai';
+                typingDiv.id = 'typing-indicator';
+                typingDiv.innerHTML = `
+                    <div class="flex items-center">
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot" style="animation-delay: 0.2s"></div>
+                        <div class="typing-dot" style="animation-delay: 0.4s"></div>
+                    </div>
+                `;
+                
+                chatContainer.appendChild(typingDiv);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+            
+            // Função para remover "digitando..."
+            function removeTyping() {
+                const typing = document.getElementById('typing-indicator');
+                if (typing) typing.remove();
+            }
+            
+            // Função principal que controla o fluxo da conversa
+            function runConversation() {
+                if (conversationStep >= conversationFlow.length) {
+                    conversationStep = 0;
+                    // Limpa o chat antes de reiniciar (opcional)
+                    setTimeout(() => {
+                        chatContainer.innerHTML = '';
+                        runConversation();
+                    }, 3000);
+                    return;
+                }
+                
+                const message = conversationFlow[conversationStep];
+                
+                // Para mensagens do sistema, mostra direto
+                if (message.type === 'system') {
+                    addMessage('system', message.text);
+                    conversationStep++;
+                    setTimeout(runConversation, message.delay);
+                } 
+                // Para mensagens do AI, mostra "digitando..." primeiro
+                else if (message.type === 'ai') {
+                    showTyping();
+                    setTimeout(() => {
+                        removeTyping();
+                        addMessage('ai', message.html || message.text, !!message.html);
+                        conversationStep++;
+                        setTimeout(runConversation, conversationFlow[conversationStep]?.delay || 1000);
+                    }, 1800);
+                } 
+                // Para mensagens do usuário
+                else {
+                    addMessage('user', message.text);
+                    conversationStep++;
+                    setTimeout(runConversation, message.delay);
+                }
+            }
+            
+            // Inicia a conversa
+            setTimeout(runConversation, 1000);
+            
+            // Botões de ação
+            document.querySelectorAll('.finance-action-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const action = this.getAttribute('data-action');
+                    let message = '';
+                    
+                    switch(action) {
+                        case 'upload':
+                            message = 'Enviar novas notas fiscais';
+                            break;
+                        case 'report':
+                            message = 'Gerar relatório completo';
+                            break;
+                        case 'discrepancies':
+                            message = 'Mostrar todas as divergências';
+                            break;
+                        case 'help':
+                            message = 'Preciso de ajuda com o sistema';
+                            break;
+                        case 'download':
+                            message = 'Baixar relatório em PDF';
+                            break;
+                        default:
+                            message = 'Ação solicitada: ' + action;
+                    }
+                    
+                    addMessage('user', message);
+                    showTyping();
+                    
+                    // Resposta automática após 1.5s
+                    setTimeout(() => {
+                        removeTyping();
+                        let response = '';
+                        
+                        switch(action) {
+                            case 'upload':
+                                response = 'Pronto para receber documentos. Você pode arrastar os arquivos ou <a href="#" class="text-primary underline">selecionar do computador</a>.';
+                                break;
+                            case 'report':
+                                response = 'Relatório completo gerado com sucesso! Contém todas as transações dos últimos 30 dias.';
+                                break;
+                            case 'discrepancies':
+                                response = 'Listando todas as divergências pendentes...';
+                                break;
+                            case 'help':
+                                response = 'Estou conectando você com nosso time de suporte. Enquanto isso, você pode consultar nossa <a href="#" class="text-primary underline">base de conhecimento</a>.';
+                                break;
+                            case 'download':
+                                response = '<i class="fas fa-download mr-1"></i> Iniciando download do relatório...<br><small>Relatorio_Financeiro_' + new Date().toLocaleDateString() + '.pdf</small>';
+                                break;
+                            default:
+                                response = 'Ação "' + action + '" reconhecida. Processando...';
+                        }
+                        
+                        addMessage('ai', response, true);
+                        chatContainer.scrollTop = chatContainer.scrollHeight;
+                    }, 1500);
+                });
+            });
         });
     </script>
 </body>
