@@ -825,39 +825,28 @@
                     <p class="text-gray-600">Preencha o formulário e nosso time entrará em contato para configurar seu agente</p>
                 </div>
                 
-                <form id="lead-form" method="POST" data-netlify="true" netlify>
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
-                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
-                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
-                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                        </div>
-                        <div>
-                            <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Empresa</label>
-                            <input type="text" id="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                        </div>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <label for="needs" class="block text-sm font-medium text-gray-700 mb-1">O que você gostaria de automatizar?</label>
-                        <textarea id="needs" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="w-full gradient-bg text-white py-3 px-6 rounded-lg font-medium hover:opacity-90 transition shadow-lg hover:shadow-primary/30">
-                        Enviar Solicitação
-                    </button>
-                    
-                    <p class="text-xs text-gray-500 mt-3 text-center">
-                        Ao enviar, você concorda com nossos <a href="#" class="text-primary underline">Termos de Serviço</a> e <a href="#" class="text-primary underline">Política de Privacidade</a>.
-                    </p>
-                </form>
+              <form action="https://formsubmit.co/your@email.com" method="POST" class="grid md:grid-cols-2 gap-6 mb-6">
+    <div>
+        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+        <input type="text" name="name" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+    </div>
+    
+    <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+        <input type="email" name="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+    </div>
+    
+    <div class="col-span-2">
+        <button type="submit" class="w-full gradient-bg text-white py-3 px-6 rounded-lg font-medium hover:opacity-90 transition shadow-lg hover:shadow-primary/30">
+            Enviar Solicitação
+        </button>
+    </div>
+
+    <p class="text-xs text-gray-500 mt-3 text-center col-span-2">
+        Ao enviar, você concorda com nossos <a href="#" class="text-primary underline">Termos de Serviço</a> e <a href="#" class="text-primary underline">Política de Privacidade</a>.
+    </p>
+</form>
+
             </div>
         </div>
     </section>
