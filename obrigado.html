@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado - IAgentics</title>
+    
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #7607e8;
+            --secondary: #6c66f3;
+            --dark: #4e027c;
+            --light: #f8f8f8;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f8f8f8 0%, #eef2f6 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+            color: #4e027c;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 50px rgba(118, 7, 232, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #7607e8 0%, #6c66f3 100%);
+        }
+        
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: rgba(118, 7, 232, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            animation: scaleIn 0.5s ease-out;
+        }
+        
+        .success-icon i {
+            font-size: 50px;
+            color: #7607e8;
+        }
+        
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #7607e8 0%, #6c66f3 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .countdown {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #7607e8;
+            margin-bottom: 30px;
+        }
+        
+        .countdown-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #7607e8;
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            text-align: center;
+            margin: 0 5px;
+            animation: pulse 2s infinite;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #7607e8 0%, #6c66f3 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(118, 7, 232, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(118, 7, 232, 0.4);
+        }
+        
+        .btn i {
+            margin-right: 8px;
+        }
+        
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(118, 7, 232, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(118, 7, 232, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(118, 7, 232, 0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .card {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .success-icon {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .success-icon i {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            
+            <h1>Obrigado pelo seu contato!</h1>
+            
+            <p>Sua mensagem foi enviada com sucesso. Nossa equipe entrará em contato em breve para conversarmos sobre como nossos agentes de IA podem transformar seu negócio.</p>
+            
+            <div class="countdown">
+                <p>Você será redirecionado em <span id="countdown-number" class="countdown-number">5</span> segundos</p>
+            </div>
+            
+            <a href="index.html" class="btn">
+                <i class="fas fa-arrow-left"></i> Voltar para a Página Inicial
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Contador regressivo e redirecionamento
+        let seconds = 5;
+        const countdownElement = document.getElementById('countdown-number');
+        const countdownInterval = setInterval(() => {
+            seconds--;
+            countdownElement.textContent = seconds;
+            
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = "index.html";
+            }
+        }, 1000);
+        
+        // Opção para cancelar o redirecionamento automático
+        document.addEventListener('click', function() {
+            clearInterval(countdownInterval);
+            countdownElement.textContent = "0";
+            document.querySelector('.countdown p').textContent = "Redirecionamento cancelado";
+        });
+    </script>
+</body>
+</html>
